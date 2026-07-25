@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>DreamOS // Hyper-Neural Engine</title>
+    <title>DreamOS // Hyper-Neural Engine v8.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +12,9 @@
     
     <style>
         :root { 
-            --bg: #020204; 
-            --ui-border: rgba(255, 255, 255, 0.05);
-            --neon-violet: #a855f7;
+            --bg: #010103; 
+            --ui-border: rgba(255, 255, 255, 0.08);
+            --neon-violet: #8b5cf6;
             --neon-cyan: #06b6d4;
             --premium-ease: cubic-bezier(0.16, 1, 0.3, 1); 
             --bounce-ease: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -28,37 +28,37 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Subtle Noise Texture Overlay */
+        /* Ultra-Fine Organic Noise Overlay */
         body::before {
             content: ""; position: fixed; inset: 0; z-index: 99999; pointer-events: none;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
         }
 
         .heading-font { font-family: 'Space Grotesk', sans-serif; }
         .mono-font { font-family: 'JetBrains Mono', monospace; }
         
-        /* Ultra-Premium Glassmorphism */
+        /* Advanced Glassmorphism Matrix */
         .glass-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.005) 100%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0%, rgba(255, 255, 255, 0.005) 100%);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(40px) saturate(150%);
-            -webkit-backdrop-filter: blur(40px) saturate(150%);
-            box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(50px) saturate(180%);
+            -webkit-backdrop-filter: blur(50px) saturate(180%);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.12);
         }
 
         /* Floating Sidebar Upgrade */
         .floating-sidebar {
-            background: linear-gradient(180deg, rgba(10, 10, 15, 0.4) 0%, rgba(2, 2, 4, 0.6) 100%);
-            backdrop-filter: blur(40px) saturate(200%);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 20px 0 60px -10px rgba(0, 0, 0, 0.8), inset 1px 1px 0 rgba(255,255,255,0.05);
+            background: linear-gradient(180deg, rgba(12, 12, 20, 0.6) 0%, rgba(2, 2, 6, 0.8) 100%);
+            backdrop-filter: blur(50px) saturate(200%);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            box-shadow: 25px 0 70px -15px rgba(0, 0, 0, 0.9), inset 1px 1px 0 rgba(255,255,255,0.08);
         }
 
-        /* Nav Interface Optimization - Hyper Fluid */
+        /* Nav Interface Hyper-Fluid State */
         .nav-item { 
             transition: all 0.5s var(--bounce-ease); 
             color: #71717a; 
-            border-radius: 16px; 
+            border-radius: 18px; 
             display: flex; 
             align-items: center; 
             justify-content: center;
@@ -76,58 +76,58 @@
                 border: 1px solid transparent;
             }
             .nav-item::before {
-                content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(168,85,247,0.1), transparent); opacity: 0; transition: opacity 0.4s ease;
+                content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(139,92,246,0.12), transparent); opacity: 0; transition: opacity 0.4s ease;
             }
             .nav-item:hover { 
                 color: #e4e4e7; 
                 transform: translateX(8px);
-                border-color: rgba(255, 255, 255, 0.05);
+                border-color: rgba(255, 255, 255, 0.08);
             }
             .nav-item:hover::before { opacity: 1; }
             .nav-item.active { 
-                background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(6, 182, 212, 0.05) 100%); 
-                color: #d8b4fe; 
-                border: 1px solid rgba(168, 85, 247, 0.4);
-                box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2), inset 0 1px 0 rgba(255,255,255,0.15);
+                background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(6, 182, 212, 0.06) 100%); 
+                color: #c4b5fd; 
+                border: 1px solid rgba(139, 92, 246, 0.5);
+                box-shadow: 0 12px 35px rgba(139, 92, 246, 0.25), inset 0 1px 0 rgba(255,255,255,0.2);
                 transform: scale(1.02) translateX(4px);
             }
-            .nav-item.active i { color: #e9d5ff; filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.8)); }
+            .nav-item.active i { color: #ede9fe; filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.9)); }
         }
 
         @media (max-width: 767px) {
             .nav-item { flex-direction: column; gap: 6px; font-size: 10px; flex: 1; padding: 12px 0; border-radius: 20px; }
-            .nav-item.active { color: #c084fc; background: rgba(255,255,255,0.04); box-shadow: inset 0 1px 0 rgba(255,255,255,0.1); }
-            .nav-item.active i { transform: translateY(-4px) scale(1.1); color: #e9d5ff; filter: drop-shadow(0 0 12px rgba(168, 85, 247, 1)); }
+            .nav-item.active { color: #c4b5fd; background: rgba(255,255,255,0.05); box-shadow: inset 0 1px 0 rgba(255,255,255,0.12); }
+            .nav-item.active i { transform: translateY(-4px) scale(1.15); color: #ede9fe; filter: drop-shadow(0 0 12px rgba(139, 92, 246, 1)); }
             .nav-item i { transition: all 0.5s var(--bounce-ease); }
         }
         
         #viewport { transition: opacity 0.7s var(--premium-ease), transform 0.7s var(--premium-ease); overflow-y: auto; position: relative; scroll-behavior: smooth; }
-        .fade-out { opacity: 0; pointer-events: none; transform: translateY(30px) scale(0.95) rotateX(5deg); filter: blur(10px); }
+        .fade-out { opacity: 0; pointer-events: none; transform: translateY(30px) scale(0.95) rotateX(5deg); filter: blur(12px); }
         .fade-in { opacity: 1; transform: translateY(0) scale(1) rotateX(0deg); filter: blur(0); }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
 
-        /* Environmental Orbs Upgrade */
+        /* Environmental Ambient Orbs */
         #atmospheric-orb { 
             position: fixed; top: -10%; left: 5%; width: 90vw; height: 90vw; 
-            background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(6, 182, 212, 0.05) 40%, transparent 70%); 
-            filter: blur(140px); z-index: -1; pointer-events: none; animation: quantumBreathe 12s ease-in-out infinite alternate; 
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.18) 0%, rgba(6, 182, 212, 0.06) 40%, transparent 75%); 
+            filter: blur(150px); z-index: -1; pointer-events: none; animation: quantumBreathe 14s ease-in-out infinite alternate; 
         }
         #atmospheric-orb-2 { 
-            position: fixed; bottom: -20%; right: -10%; width: 80vw; height: 80vw; 
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(168, 85, 247, 0.04) 50%, transparent 80%); 
-            filter: blur(100px); z-index: -1; pointer-events: none; animation: quantumBreathe 18s ease-in-out infinite alternate-reverse;
+            position: fixed; bottom: -20%; right: -10%; width: 85vw; height: 85vw; 
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(139, 92, 246, 0.05) 50%, transparent 80%); 
+            filter: blur(120px); z-index: -1; pointer-events: none; animation: quantumBreathe 18s ease-in-out infinite alternate-reverse;
         }
 
         .app-grid {
             position: fixed; inset: 0;
             background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px), 
-                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px), 
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
             background-size: 60px 60px; pointer-events: none; z-index: -1;
             transform: perspective(1000px) rotateX(60deg) scale(2.5) translateY(-20%);
             transform-origin: top center;
-            opacity: 0.4;
-            animation: gridMove 20s linear infinite;
+            opacity: 0.45;
+            animation: gridMove 25s linear infinite;
         }
         @keyframes gridMove {
             0% { background-position: 0 0; }
@@ -135,7 +135,7 @@
         }
         .app-grid::after {
             content: ''; position: absolute; inset: 0;
-            background: radial-gradient(circle at 50% 30%, transparent 10%, var(--bg) 70%);
+            background: radial-gradient(circle at 50% 30%, transparent 15%, var(--bg) 75%);
         }
 
         .animate-slide-up { opacity: 0; transform: translateY(40px) scale(0.98); filter: blur(12px); animation: slideFadeUp 1s var(--bounce-ease) forwards; }
@@ -145,25 +145,25 @@
         .hover-card::before {
             content: ''; position: absolute; inset: -2px; border-radius: inherit; z-index: -1;
             background: linear-gradient(135deg, var(--neon-violet), var(--neon-cyan), var(--neon-violet));
-            background-size: 200% auto; opacity: 0; transition: opacity 0.5s ease; filter: blur(12px);
+            background-size: 200% auto; opacity: 0; transition: opacity 0.5s ease; filter: blur(14px);
         }
         .hover-card::after {
             content: ''; position: absolute; inset: 0; border-radius: inherit;
-            border: 1px solid transparent; background: linear-gradient(135deg, rgba(168, 85, 247, 0.6), rgba(6, 182, 212, 0.6)) border-box;
+            border: 1px solid transparent; background: linear-gradient(135deg, rgba(139, 92, 246, 0.7), rgba(6, 182, 212, 0.7)) border-box;
             -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
             opacity: 0; transition: opacity 0.5s var(--premium-ease); pointer-events: none;
         }
         .hover-card:hover { 
             transform: translateY(-12px) scale(1.02) rotateX(2deg) rotateY(1deg); 
-            box-shadow: 0 40px 80px -20px rgba(0,0,0,0.8), 0 0 50px rgba(168,85,247,0.15); 
-            background: rgba(255,255,255,0.04); 
+            box-shadow: 0 45px 90px -20px rgba(0,0,0,0.85), 0 0 60px rgba(139,92,246,0.18); 
+            background: rgba(255,255,255,0.05); 
         }
         .hover-card:hover::before, .hover-card:hover::after { opacity: 1; animation: gradientShift 3s linear infinite; }
 
         @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-        /* Organic Orb Architecture Upgrade */
-        .orb-stage { position: relative; width: 100%; max-width: 550px; height: 420px; display: flex; justify-content: center; align-items: center; margin: 0 auto; transition: all 1.2s cubic-bezier(0.2, 1, 0.2, 1); perspective: 1000px; }
+        /* Organic Orb Architecture */
+        .orb-stage { position: relative; width: 100%; max-width: 550px; height: 420px; display: flex; justify-content: center; align-items: center; margin: 0 auto; transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); perspective: 1000px; }
         
         @keyframes fluidShape {
             0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
@@ -172,179 +172,233 @@
         }
 
         .orb-core { 
-            position: absolute; width: 180px; height: 180px; cursor: pointer; 
-            background: radial-gradient(circle at 30% 30%, #fff, #c084fc 20%, #6b21a8 60%, #020204 100%); 
-            box-shadow: inset -15px -15px 40px rgba(0,0,0,0.9), inset 15px 15px 40px rgba(255,255,255,0.8), 0 0 80px rgba(168, 85, 247, 0.4); 
-            transition: all 0.8s var(--bounce-ease); z-index: 10; 
+            position: absolute; width: 190px; height: 190px; cursor: pointer; 
+            background: radial-gradient(circle at 30% 30%, #fff, #c084fc 20%, #581c87 60%, #010103 100%); 
+            box-shadow: inset -18px -18px 45px rgba(0,0,0,0.9), inset 18px 18px 45px rgba(255,255,255,0.85), 0 0 90px rgba(139, 92, 246, 0.45); 
+            transition: all 0.5s var(--premium-ease); z-index: 10; 
             animation: fluidShape 8s ease-in-out infinite, quantumFloat 6s ease-in-out infinite;
         }
         
         .tech-ring {
-            position: absolute; border-radius: 50%; border: 1px dashed rgba(6, 182, 212, 0.3);
-            pointer-events: none; z-index: 2; transition: all 1.5s var(--bounce-ease); transform-style: preserve-3d;
+            position: absolute; border-radius: 50%; border: 1px dashed rgba(6, 182, 212, 0.35);
+            pointer-events: none; z-index: 2; transition: all 1s var(--premium-ease); transform-style: preserve-3d;
         }
-        .tr-1 { width: 260px; height: 260px; animation: orb-spin-3d 20s linear infinite; border-top-color: rgba(168,85,247,0.6); border-width: 2px; }
-        .tr-2 { width: 340px; height: 340px; animation: orb-spin-3d 30s linear infinite reverse; border-bottom-color: rgba(6,182,212,0.6); border-style: dotted; border-width: 3px; }
+        .tr-1 { width: 270px; height: 270px; animation: orb-spin-3d 20s linear infinite; border-top-color: rgba(139,92,246,0.65); border-width: 2px; }
+        .tr-2 { width: 350px; height: 350px; animation: orb-spin-3d 30s linear infinite reverse; border-bottom-color: rgba(6,182,212,0.65); border-style: dotted; border-width: 3px; }
         
         @keyframes orb-spin-3d { from { transform: rotateX(60deg) rotateY(20deg) rotateZ(0deg); } to { transform: rotateX(60deg) rotateY(20deg) rotateZ(360deg); } }
 
-        .orb-glow { position: absolute; width: 260px; height: 260px; border-radius: 50%; background: conic-gradient(from 180deg, transparent, rgba(168, 85, 247, 0.8), transparent, rgba(6, 182, 212, 0.8), transparent); filter: blur(40px); animation: orb-spin 8s linear infinite; pointer-events: none; z-index: 5; transition: all 1.2s var(--premium-ease); opacity: 0.7; }
+        .orb-glow { position: absolute; width: 280px; height: 280px; border-radius: 50%; background: conic-gradient(from 180deg, transparent, rgba(139, 92, 246, 0.85), transparent, rgba(6, 182, 212, 0.85), transparent); filter: blur(45px); animation: orb-spin 8s linear infinite; pointer-events: none; z-index: 5; transition: all 0.8s var(--premium-ease); opacity: 0.75; }
         
-        .ripple { position: absolute; width: 180px; height: 180px; border-radius: 50%; border: 2px solid rgba(168, 85, 247, 0.6); opacity: 0; pointer-events: none; z-index: 4; }
+        .ripple { position: absolute; width: 190px; height: 190px; border-radius: 50%; border: 2px solid rgba(139, 92, 246, 0.65); opacity: 0; pointer-events: none; z-index: 4; }
         
-        #orb-morph-ring { position: absolute; width: 100%; height: 100%; border: 4px solid #c084fc; border-radius: 50%; opacity: 0; pointer-events: none; z-index: 20; transform: scale(0.4); box-shadow: 0 0 50px #c084fc; }
+        #orb-morph-ring { position: absolute; width: 100%; height: 100%; border: 4px solid #c084fc; border-radius: 50%; opacity: 0; pointer-events: none; z-index: 20; transform: scale(0.4); box-shadow: 0 0 60px #c084fc; }
 
         /* Active Listening State */
         .is-listening .orb-core { 
-            background: radial-gradient(circle at 50% 50%, #ffffff, #22d3ee 30%, #0891b2 70%, #020204 100%); 
-            box-shadow: inset -10px -10px 30px rgba(0,0,0,0.8), inset 10px 10px 35px rgba(255,255,255,0.9), 0 0 120px rgba(6, 182, 212, 0.9); 
+            background: radial-gradient(circle at 50% 50%, #ffffff, #22d3ee 30%, #0891b2 70%, #010103 100%); 
+            box-shadow: inset -12px -12px 35px rgba(0,0,0,0.85), inset 12px 12px 40px rgba(255,255,255,0.95), 0 0 130px rgba(6, 182, 212, 0.95); 
             animation: fluidShape 3s ease-in-out infinite, pulseGlow 1s infinite alternate;
         }
-        @keyframes pulseGlow { from { filter: brightness(1); } to { filter: brightness(1.3); transform: scale(1.05); } }
+        @keyframes pulseGlow { from { filter: brightness(1); } to { filter: brightness(1.35); transform: scale(1.06); } }
 
-        .is-listening .orb-glow { width: 380px; height: 380px; filter: blur(50px) brightness(1.8); animation: orb-spin 3s linear infinite; }
-        .is-listening .tr-1 { width: 400px; height: 400px; border-color: rgba(6, 182, 212, 0.8); border-width: 4px; transform: rotateX(70deg) rotateY(0) scale(1.2); }
-        .is-listening .tr-2 { width: 480px; height: 480px; border-color: rgba(168, 85, 247, 0.7); border-width: 2px; transform: rotateX(50deg) rotateY(30deg) scale(0.8); }
+        .is-listening .orb-glow { width: 400px; height: 400px; filter: blur(55px) brightness(1.9); animation: orb-spin 3s linear infinite; }
+        .is-listening .tr-1 { width: 420px; height: 420px; border-color: rgba(6, 182, 212, 0.85); border-width: 4px; transform: rotateX(70deg) rotateY(0) scale(1.2); }
+        .is-listening .tr-2 { width: 500px; height: 500px; border-color: rgba(139, 92, 246, 0.75); border-width: 2px; transform: rotateX(50deg) rotateY(30deg) scale(0.85); }
         .is-listening .ripple-1 { animation: ripple-effect 2s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
         .is-listening .ripple-2 { animation: ripple-effect 2s cubic-bezier(0.16, 1, 0.3, 1) infinite 1s; }
 
-        /* Morphed State (Result) */
-        .orb-stage.is-morphed { height: 560px; max-width: 680px; }
+        /* Morphed State (Result Expansion) */
+        .orb-stage.is-morphed { height: 660px; max-width: 680px; transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .is-morphed .orb-core { 
             width: 100%; height: 100%; border-radius: 40px !important; animation: none !important; 
-            background: linear-gradient(160deg, rgba(15, 15, 20, 0.8) 0%, rgba(5, 5, 8, 0.95) 100%); 
-            box-shadow: 0 60px 120px -20px rgba(0,0,0,1), inset 0 2px 4px rgba(255,255,255,0.2), 0 0 80px rgba(168,85,247,0.1); 
-            border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(60px); -webkit-backdrop-filter: blur(60px); 
-            cursor: default; transform: scale(1) !important; transition: all 1.2s var(--bounce-ease); 
+            background: linear-gradient(160deg, rgba(16, 16, 24, 0.88) 0%, rgba(4, 4, 10, 0.99) 100%); 
+            box-shadow: 0 70px 140px -20px rgba(0,0,0,1), inset 0 2px 4px rgba(255,255,255,0.25), 0 0 90px rgba(139,92,246,0.12); 
+            border: 1px solid rgba(255,255,255,0.16); backdrop-filter: blur(65px); -webkit-backdrop-filter: blur(65px); 
+            cursor: default; transform: scale(1) !important; transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
         }
-        .is-morphed .orb-glow { width: 140%; height: 140%; opacity: 0.15; filter: blur(100px); animation: orb-spin 40s linear infinite; }
+        .is-morphed .orb-glow { width: 140%; height: 140%; opacity: 0.15; filter: blur(110px); animation: orb-spin 40s linear infinite; }
         .is-morphed .tech-ring { opacity: 0; scale: 2; pointer-events: none; }
-        .is-morphed #orb-morph-ring { animation: morph-ring-boom 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .is-morphed #orb-morph-ring { animation: morph-ring-boom 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
         
-        .morph-content { position: absolute; inset: 0; z-index: 20; padding: 3rem; display: flex; flex-direction: column; pointer-events: none; }
-        .is-morphed .morph-content { pointer-events: all; }
+        .morph-content { position: absolute; inset: 0; z-index: 20; padding: 2.5rem; display: flex; flex-direction: column; pointer-events: none; opacity: 0; transition: opacity 0.4s ease 0.2s; }
+        .is-morphed .morph-content { pointer-events: all; opacity: 1; }
         
-        .reveal-item { opacity: 0; transform: translateY(30px) scale(0.95); filter: blur(10px); }
-        .is-morphed .reveal-item { animation: slideFadeUp 0.8s var(--bounce-ease) forwards; }
-        .is-morphed .delay-1 { animation-delay: 0.4s; } 
-        .is-morphed .delay-2 { animation-delay: 0.55s; } 
-        .is-morphed .delay-3 { animation-delay: 0.7s; }
+        .reveal-item { opacity: 0; transform: translateY(20px); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .is-morphed .reveal-item { opacity: 1; transform: translateY(0); }
+        .is-morphed .delay-1 { transition-delay: 0.2s; } 
+        .is-morphed .delay-2 { transition-delay: 0.3s; } 
+        .is-morphed .delay-3 { transition-delay: 0.4s; }
 
         @media (max-width: 768px) {
-            .orb-stage.is-morphed { height: 100%; min-height: 500px; }
-            .morph-content { padding: 2rem; }
-            .orb-core { width: 150px; height: 150px; }
-            .ripple { width: 150px; height: 150px; }
+            .orb-stage.is-morphed { height: 100%; min-height: 580px; }
+            .morph-content { padding: 1.5rem; }
+            .orb-core { width: 160px; height: 160px; }
+            .ripple { width: 160px; height: 160px; }
             .tech-ring { display: none; }
         }
 
-        .live-word { display: inline-block; animation: word-fade-in 0.5s var(--bounce-ease) forwards; opacity: 0; filter: blur(8px) brightness(2); transform: translateY(10px) scale(1.2); margin-right: 0.25em; color: #fff; text-shadow: 0 0 20px rgba(6, 182, 212, 0.8); font-weight: 500; }
+        .live-word { display: inline-block; animation: word-fade-in 0.5s var(--bounce-ease) forwards; opacity: 0; filter: blur(8px) brightness(2); transform: translateY(10px) scale(1.2); margin-right: 0.25em; color: #fff; text-shadow: 0 0 20px rgba(6, 182, 212, 0.85); font-weight: 500; }
 
-        /* Lock Screen Upgrade - Cybernetic Iris */
+        /* Lock Screen Upgrade - iPhone Style 4-Digit Passcode Matrix */
         #lock-screen {
             position: fixed; inset: 0; z-index: 9999;
-            background: radial-gradient(circle at center, rgba(10,10,15,0.85) 0%, rgba(0,0,0,1) 100%);
-            backdrop-filter: blur(80px) saturate(200%);
-            -webkit-backdrop-filter: blur(80px) saturate(200%);
-            display: flex; flex-direction: column; align-items: center; justify-content: space-between;
-            padding-top: calc(15vh + env(safe-area-inset-top));
-            padding-bottom: calc(8vh + env(safe-area-inset-bottom));
+            background: radial-gradient(circle at center, rgba(12,12,20,0.95) 0%, rgba(1,1,3,1) 100%);
+            backdrop-filter: blur(90px) saturate(200%);
+            -webkit-backdrop-filter: blur(90px) saturate(200%);
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 2rem;
             transition: all 0.7s cubic-bezier(0.7, 0, 0.3, 1);
         }
         
         #lock-screen::before {
             content: ''; position: absolute; inset: 0; 
-            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.02) 2px, rgba(255,255,255,0.02) 4px);
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.015) 2px, rgba(255,255,255,0.015) 4px);
             pointer-events: none; z-index: -1;
-            animation: scanline 10s linear infinite;
+            animation: scanline 12s linear infinite;
         }
         @keyframes scanline { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
 
-        .lock-hidden { opacity: 0; pointer-events: none; transform: scale(1.15) translateY(-50px); filter: blur(30px); }
+        .lock-hidden { opacity: 0; pointer-events: none; transform: scale(1.15) translateY(-50px); filter: blur(35px); }
         
         @keyframes errorShake {
-            0%, 100% { transform: translateX(0) rotate(0); }
-            15% { transform: translateX(-15px) rotate(-2deg); filter: blur(2px) hue-rotate(90deg); }
-            30% { transform: translateX(15px) rotate(2deg); filter: blur(0); }
-            45% { transform: translateX(-10px) rotate(-1deg); }
-            60% { transform: translateX(10px) rotate(1deg); }
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-12px); filter: brightness(1.5); }
+            40% { transform: translateX(12px); }
+            60% { transform: translateX(-8px); }
+            80% { transform: translateX(8px); }
         }
-        .shake { animation: errorShake 0.5s var(--bounce-ease) both; }
-        
-        /* Sci-Fi Keypad */
-        .ios-key {
-            width: 84px; height: 84px; border-radius: 50%;
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.2));
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .shake { animation: errorShake 0.4s ease both; }
+
+        /* iPhone Passcode Dots */
+        .passcode-dot {
+            width: 16px; height: 16px; border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            background: transparent; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .passcode-dot.filled {
+            background: #ffffff; border-color: #ffffff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(139, 92, 246, 0.8);
+            transform: scale(1.15);
+        }
+
+        /* iOS Glass Keypad Buttons */
+        .num-key {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 50%;
+            width: 80px; height: 80px;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            color: #ffffff; transition: all 0.2s var(--bounce-ease);
-            touch-manipulation: manipulation; -webkit-tap-highlight-color: transparent;
-            box-shadow: inset 0 2px 4px rgba(255,255,255,0.05), 0 10px 20px -5px rgba(0,0,0,0.5);
+            color: #ffffff; font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 500;
+            cursor: pointer; transition: all 0.2s var(--bounce-ease);
+            user-select: none; touch-manipulation: manipulation; -webkit-tap-highlight-color: transparent;
+            box-shadow: 0 15px 35px -5px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2);
         }
-        .ios-key:hover {
-            border-color: rgba(168, 85, 247, 0.5);
-            box-shadow: inset 0 2px 10px rgba(168, 85, 247, 0.2), 0 0 20px rgba(168, 85, 247, 0.2);
-            transform: translateY(-2px);
+        .num-key:hover {
+            border-color: rgba(139, 92, 246, 0.7);
+            background: rgba(139, 92, 246, 0.2);
+            box-shadow: 0 0 35px rgba(139, 92, 246, 0.4);
+            transform: scale(1.05);
         }
-        .ios-key:active {
-            background: rgba(168, 85, 247, 0.3);
-            transform: scale(0.9) translateY(4px);
-            box-shadow: inset 0 5px 15px rgba(0,0,0,0.8);
-            border-color: rgba(168, 85, 247, 0.8);
+        .num-key:active {
+            transform: scale(0.9);
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(6, 182, 212, 0.9);
         }
-        .ios-key-label {
-            font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-top: -2px; opacity: 0.4; font-family: 'JetBrains Mono', monospace;
+        .num-sub {
+            font-size: 9px; font-mono font-bold tracking-[0.2em] text-zinc-400 uppercase mt-[-2px];
+        }
+
+        /* Custom Range Slider Styling */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]:focus {
+            outline: none;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 9999px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        input[type=range]::-webkit-slider-thumb {
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -8px;
+            box-shadow: 0 0 18px rgba(6, 182, 212, 0.85), 0 2px 6px rgba(0,0,0,0.5);
+            border: 2px solid rgba(255, 255, 255, 0.95);
+            transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
         }
 
         /* Animation Matrices */
         @keyframes quantumFloat { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-20px) scale(1.05); } }
         @keyframes orb-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        @keyframes ripple-effect { 0% { width: 180px; height: 180px; opacity: 1; border-width: 4px; border-color: rgba(6, 182, 212, 1); transform: scale(1); } 100% { width: 700px; height: 700px; opacity: 0; border-width: 0px; border-color: rgba(168, 85, 247, 0); transform: scale(1.5); } }
+        @keyframes ripple-effect { 0% { width: 190px; height: 190px; opacity: 1; border-width: 4px; border-color: rgba(6, 182, 212, 1); transform: scale(1); } 100% { width: 750px; height: 750px; opacity: 0; border-width: 0px; border-color: rgba(139, 92, 246, 0); transform: scale(1.5); } }
         @keyframes slideFadeUp { 0% { opacity: 0; transform: translateY(40px) scale(0.98); filter: blur(12px); } 100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
-        @keyframes quantumBreathe { 0% { opacity: 0.2; transform: scale(0.8) translate(5%, -5%); } 100% { opacity: 0.8; transform: scale(1.2) translate(-5%, 5%); } }
+        @keyframes quantumBreathe { 0% { opacity: 0.2; transform: scale(0.8) translate(5%, -5%); } 100% { opacity: 0.85; transform: scale(1.2) translate(-5%, 5%); } }
         @keyframes word-fade-in { to { opacity: 1; filter: blur(0) brightness(1); transform: translateY(0) scale(1); } }
         @keyframes morph-ring-boom { 0% { opacity: 1; transform: scale(0.5); border-width: 8px; border-color: var(--neon-cyan); box-shadow: 0 0 100px var(--neon-cyan); } 100% { opacity: 0; transform: scale(3.5); border-width: 0px; border-color: var(--neon-violet); box-shadow: 0 0 0px var(--neon-violet); } }
     </style>
 </head>
-<body class="bg-[#020204]">
+<body class="bg-[#010103]">
 
-    <!-- Advanced Vault UI Lock Layer -->
+    <!-- iPhone Style Passcode / Setup Vault Screen -->
     <div id="lock-screen" class="select-none flex">
-        <div class="flex flex-col items-center text-center animate-slide-up">
-            <div class="relative mb-8 group">
+        <div class="flex flex-col items-center text-center animate-slide-up max-w-md w-full">
+            <div class="relative mb-6 group">
                 <div class="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-700 animate-pulse"></div>
-                <div class="w-16 h-16 rounded-full border-2 border-white/20 bg-black/50 backdrop-blur-md flex items-center justify-center relative z-10 shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+                <div class="w-16 h-16 rounded-full border-2 border-white/20 bg-black/60 backdrop-blur-md flex items-center justify-center relative z-10 shadow-[0_0_50px_rgba(255,255,255,0.12)]">
                     <i data-lucide="lock" id="lock-icon" class="w-7 h-7 text-white/95"></i>
                 </div>
             </div>
             <h1 id="lock-status" class="text-2xl font-bold tracking-wider text-white heading-font">Enter Passcode</h1>
-            <p id="lock-substatus" class="text-[11px] text-cyan-400 font-mono tracking-[0.2em] uppercase mt-2 opacity-80">Awaiting Security Authorization</p>
+            <p id="lock-substatus" class="text-[11px] text-cyan-400 font-mono tracking-[0.2em] uppercase mt-2 opacity-85">4-Digit Numeral Code Required</p>
             
-            <div id="passcode-dots" class="flex gap-6 mt-10 transition-transform duration-300">
-                <div class="w-4 h-4 rounded-full border-2 border-white/30 transition-all duration-300"></div>
-                <div class="w-4 h-4 rounded-full border-2 border-white/30 transition-all duration-300"></div>
-                <div class="w-4 h-4 rounded-full border-2 border-white/30 transition-all duration-300"></div>
-                <div class="w-4 h-4 rounded-full border-2 border-white/30 transition-all duration-300"></div>
+            <!-- Passcode Dot Indicators (4 digits) -->
+            <div id="passcode-dots" class="flex gap-4 my-8">
+                <div class="passcode-dot" data-index="0"></div>
+                <div class="passcode-dot" data-index="1"></div>
+                <div class="passcode-dot" data-index="2"></div>
+                <div class="passcode-dot" data-index="3"></div>
             </div>
         </div>
 
-        <div class="flex flex-col items-center w-full max-w-[320px] animate-slide-up" style="animation-delay: 0.1s">
-            <div class="grid grid-cols-3 gap-x-8 gap-y-6 w-full justify-items-center">
-                <button onclick="SystemLock.pressKey('1')" class="ios-key"><span class="text-4xl font-light">1</span><span class="ios-key-label">&nbsp;</span></button>
-                <button onclick="SystemLock.pressKey('2')" class="ios-key"><span class="text-4xl font-light">2</span><span class="ios-key-label">A B C</span></button>
-                <button onclick="SystemLock.pressKey('3')" class="ios-key"><span class="text-4xl font-light">3</span><span class="ios-key-label">D E F</span></button>
-                
-                <button onclick="SystemLock.pressKey('4')" class="ios-key"><span class="text-4xl font-light">4</span><span class="ios-key-label">G H I</span></button>
-                <button onclick="SystemLock.pressKey('5')" class="ios-key"><span class="text-4xl font-light">5</span><span class="ios-key-label">J K L</span></button>
-                <button onclick="SystemLock.pressKey('6')" class="ios-key"><span class="text-4xl font-light">6</span><span class="ios-key-label">M N O</span></button>
-                
-                <button onclick="SystemLock.pressKey('7')" class="ios-key"><span class="text-4xl font-light">7</span><span class="ios-key-label">P Q R S</span></button>
-                <button onclick="SystemLock.pressKey('8')" class="ios-key"><span class="text-4xl font-light">8</span><span class="ios-key-label">T U V</span></button>
-                <button onclick="SystemLock.pressKey('9')" class="ios-key"><span class="text-4xl font-light">9</span><span class="ios-key-label">W X Y Z</span></button>
-                
-                <div class="w-[84px] h-[84px]"></div>
-                <button onclick="SystemLock.pressKey('0')" class="ios-key"><span class="text-4xl font-light">0</span><span class="ios-key-label">+</span></button>
-                <button onclick="SystemLock.pressDelete()" class="w-[84px] h-[84px] flex items-center justify-center text-sm font-bold tracking-widest uppercase text-zinc-400 hover:text-white active:text-purple-400 transition-colors duration-200 touch-manipulation">Delete</button>
+        <!-- iPhone Numeric Keypad Matrix -->
+        <div class="flex flex-col items-center w-full max-w-xs animate-slide-up" style="animation-delay: 0.1s">
+            <div class="grid grid-cols-3 gap-5 mb-5">
+                <button onclick="SystemLock.pressKey('1')" class="num-key">1<span class="num-sub">&nbsp;</span></button>
+                <button onclick="SystemLock.pressKey('2')" class="num-key">2<span class="num-sub">ABC</span></button>
+                <button onclick="SystemLock.pressKey('3')" class="num-key">3<span class="num-sub">DEF</span></button>
+                <button onclick="SystemLock.pressKey('4')" class="num-key">4<span class="num-sub">GHI</span></button>
+                <button onclick="SystemLock.pressKey('5')" class="num-key">5<span class="num-sub">JKL</span></button>
+                <button onclick="SystemLock.pressKey('6')" class="num-key">6<span class="num-sub">MNO</span></button>
+                <button onclick="SystemLock.pressKey('7')" class="num-key">7<span class="num-sub">PQRS</span></button>
+                <button onclick="SystemLock.pressKey('8')" class="num-key">8<span class="num-sub">TUV</span></button>
+                <button onclick="SystemLock.pressKey('9')" class="num-key">9<span class="num-sub">WXYZ</span></button>
+            </div>
+            <div class="flex gap-5 w-full justify-center items-center">
+                <div class="w-[80px]"></div>
+                <button onclick="SystemLock.pressKey('0')" class="num-key">0<span class="num-sub">&nbsp;</span></button>
+                <button onclick="SystemLock.deleteKey()" class="w-[80px] h-[80px] flex items-center justify-center text-zinc-300 hover:text-white transition-colors active:scale-90">
+                    <i data-lucide="delete" class="w-7 h-7"></i>
+                </button>
+            </div>
+            <div class="mt-8 flex items-center gap-2">
+                <button onclick="SystemLock.resetPasscodeFlow()" id="reset-passcode-btn" class="text-[10px] font-mono text-zinc-500 hover:text-cyan-400 uppercase tracking-widest transition-colors">Reset Passcode</button>
             </div>
         </div>
     </div>
@@ -355,10 +409,10 @@
         <div id="atmospheric-orb-2"></div>
         <div class="app-grid"></div>
 
-        <aside class="w-full md:w-80 max-md:fixed max-md:bottom-6 max-md:left-4 max-md:right-4 max-md:rounded-3xl max-md:bg-[#040406]/80 max-md:backdrop-blur-3xl max-md:border max-md:border-white/10 max-md:shadow-[0_20px_40px_rgba(0,0,0,0.8)] max-md:p-2 md:h-[calc(100vh-3rem)] md:m-6 md:rounded-[2.5rem] md:floating-sidebar p-8 flex flex-row md:flex-col justify-between items-center md:items-stretch z-50 relative shrink-0">
+        <aside class="w-full md:w-80 max-md:fixed max-md:bottom-6 max-md:left-4 max-md:right-4 max-md:rounded-3xl max-md:bg-[#030307]/85 max-md:backdrop-blur-3xl max-md:border max-md:border-white/10 max-md:shadow-[0_20px_40px_rgba(0,0,0,0.85)] max-md:p-2 md:h-[calc(100vh-3rem)] md:m-6 md:rounded-[2.5rem] md:floating-sidebar p-8 flex flex-row md:flex-col justify-between items-center md:items-stretch z-50 relative shrink-0">
             <div class="px-2 md:mb-16 flex items-center gap-4 hidden md:flex animate-slide-up">
                 <div class="relative flex items-center justify-center">
-                    <div class="w-3 h-3 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,1)] z-10"></div>
+                    <div class="w-3 h-3 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(139,92,246,1)] z-10"></div>
                     <div class="absolute w-8 h-8 rounded-full bg-cyan-400/30 animate-ping opacity-80 mix-blend-screen"></div>
                 </div>
                 <h1 class="text-2xl font-black tracking-[0.2em] uppercase text-white heading-font">DreamOS</h1>
@@ -378,11 +432,11 @@
                 </a>
             </nav>
             <div class="hidden md:block px-2 mt-auto animate-slide-up" style="animation-delay: 0.3s">
-                <div class="flex items-center gap-3 mb-2 bg-black/30 py-2 px-3 rounded-xl border border-white/5 w-fit">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)] animate-pulse"></span>
+                <div class="flex items-center gap-3 mb-2 bg-black/35 py-2 px-3 rounded-xl border border-white/5 w-fit">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.85)] animate-pulse"></span>
                     <p class="text-[10px] text-zinc-400 font-mono tracking-[0.15em] uppercase">System Connected</p>
                 </div>
-                <p class="text-[9px] text-zinc-600 font-mono tracking-[0.2em] ml-1">BUILD CORE // v7.4.2-OMEGA</p>
+                <p class="text-[9px] text-zinc-600 font-mono tracking-[0.2em] ml-1">BUILD CORE // v8.0-OMEGA</p>
             </div>
         </aside>
 
@@ -390,123 +444,132 @@
     </div>
 
 <script>
-    /** --- SYSTEM SECURITY PROTOCOL --- */
+    /** --- SYSTEM SECURITY PROTOCOL (IPHONE 4-DIGIT PASSCODE & CREATION FLOW) --- */
     const SystemLock = {
-        isLocked: true,
         currentInput: '',
-        mode: 'ENTER',
+        mode: 'verify', // 'verify', 'create', 'confirm'
         tempPasscode: '',
         
         init() {
-            try {
-                const savedPasscode = localStorage.getItem('sys_passcode');
-                if (!savedPasscode) {
-                    this.mode = 'CREATE';
-                    this.updateUI('Create Passcode', 'Setup a new 4-digit security key');
-                } else {
-                    this.mode = 'ENTER';
-                    this.updateUI('Enter Passcode', 'Awaiting Authorization');
-                }
-            } catch (e) { console.error("Storage inaccessible."); }
+            const savedPasscode = localStorage.getItem('dreamos_passcode');
+            if (!savedPasscode) {
+                this.mode = 'create';
+                this.updatePrompt('Create Passcode', 'Enter a new 4-digit passcode');
+            } else {
+                this.mode = 'verify';
+                this.updatePrompt('Enter Passcode', '4-digit numeral code for iPhone');
+            }
+            this.updateDots();
 
+            // Keyboard input support
             document.addEventListener('keydown', (e) => {
-                if (!this.isLocked) return;
-                if (e.key >= '0' && e.key <= '9') {
+                if (document.getElementById('lock-screen').style.display === 'none') return;
+                if (e.key === 'Backspace') {
+                    this.deleteKey();
+                } else if (e.key.length === 1 && /^[0-9]$/.test(e.key)) {
                     this.pressKey(e.key);
-                } else if (e.key === 'Backspace') {
-                    this.pressDelete();
                 }
-            });
-
-            // Enhanced security auto-lock logic (fires only if entirely blurred out)
-            window.addEventListener('blur', () => {
-                if (!this.isLocked) this.lock();
             });
             
             lucide.createIcons();
         },
-        updateUI(status, substatus) {
+
+        updatePrompt(title, subtitle) {
             const statusEl = document.getElementById('lock-status');
             const substatusEl = document.getElementById('lock-substatus');
-            if (statusEl) statusEl.innerText = status;
-            if (substatusEl) substatusEl.innerText = substatus;
-            this.updateDots();
+            if (statusEl) statusEl.innerText = title;
+            if (substatusEl) substatusEl.innerText = subtitle;
         },
+
         updateDots() {
-            const dotsContainer = document.getElementById('passcode-dots');
-            if (!dotsContainer) return;
-            const dots = dotsContainer.children;
-            for (let i = 0; i < dots.length; i++) {
-                if (i < this.currentInput.length) {
-                    dots[i].classList.remove('border-white/30', 'bg-transparent', 'scale-100');
-                    dots[i].classList.add('bg-cyan-400', 'border-cyan-400', 'scale-125', 'shadow-[0_0_15px_rgba(34,211,238,0.8)]');
+            const dots = document.querySelectorAll('.passcode-dot');
+            dots.forEach((dot, index) => {
+                if (index < this.currentInput.length) {
+                    dot.classList.add('filled');
                 } else {
-                    dots[i].classList.remove('bg-cyan-400', 'border-cyan-400', 'scale-125', 'shadow-[0_0_15px_rgba(34,211,238,0.8)]');
-                    dots[i].classList.add('border-white/30', 'bg-transparent', 'scale-100');
+                    dot.classList.remove('filled');
+                }
+            });
+        },
+
+        pressKey(num) {
+            if (this.currentInput.length < 4) {
+                this.currentInput += num;
+                this.updateDots();
+                
+                if (this.currentInput.length === 4) {
+                    setTimeout(() => this.handleComplete(), 150);
                 }
             }
         },
-        pressKey(num) {
-            if (this.currentInput.length >= 4) return;
-            this.currentInput += num;
-            this.updateDots();
 
-            if (this.currentInput.length === 4) {
-                setTimeout(() => this.processPasscode(), 300);
-            }
-        },
-        pressDelete() {
+        deleteKey() {
             if (this.currentInput.length > 0) {
                 this.currentInput = this.currentInput.slice(0, -1);
                 this.updateDots();
             }
         },
-        processPasscode() {
-            if (this.mode === 'CREATE') {
-                this.tempPasscode = this.currentInput;
-                this.currentInput = '';
-                this.mode = 'CONFIRM';
-                this.updateUI('Confirm Passcode', 'Re-enter your 4-digit key');
-            } else if (this.mode === 'CONFIRM') {
-                if (this.currentInput === this.tempPasscode) {
-                    try { localStorage.setItem('sys_passcode', this.currentInput); } catch (e) {}
-                    this.currentInput = '';
-                    this.mode = 'ENTER';
-                    this.unlock();
-                } else {
-                    this.triggerError('Match Failed', 'Please try again');
-                }
-            } else if (this.mode === 'ENTER') {
-                const savedPasscode = localStorage.getItem('sys_passcode');
+
+        handleComplete() {
+            const savedPasscode = localStorage.getItem('dreamos_passcode');
+
+            if (this.mode === 'verify') {
                 if (this.currentInput === savedPasscode) {
                     this.unlock();
                 } else {
-                    this.triggerError('Wrong Passcode', 'Authentication Failed');
+                    this.triggerError('Incorrect Passcode');
+                }
+            } else if (this.mode === 'create') {
+                this.tempPasscode = this.currentInput;
+                this.currentInput = '';
+                this.mode = 'confirm';
+                this.updatePrompt('Confirm Passcode', 'Re-enter your 4-digit passcode');
+                this.updateDots();
+            } else if (this.mode === 'confirm') {
+                if (this.currentInput === this.tempPasscode) {
+                    localStorage.setItem('dreamos_passcode', this.currentInput);
+                    this.unlock();
+                } else {
+                    this.triggerError('Passcodes Did Not Match');
+                    this.tempPasscode = '';
+                    this.mode = 'create';
+                    this.updatePrompt('Create Passcode', 'Enter a new 4-digit passcode');
                 }
             }
         },
-        triggerError(status, substatus) {
+
+        resetPasscodeFlow() {
+            localStorage.removeItem('dreamos_passcode');
             this.currentInput = '';
-            this.updateUI(status, substatus);
+            this.tempPasscode = '';
+            this.mode = 'create';
+            this.updatePrompt('Create Passcode', 'Enter a new 4-digit passcode');
+            this.updateDots();
+        },
+
+        triggerError(status) {
+            const statusEl = document.getElementById('lock-status');
+            if (statusEl) statusEl.innerText = status;
             
             const dotsContainer = document.getElementById('passcode-dots');
             if (dotsContainer) {
                 dotsContainer.classList.add('shake');
                 setTimeout(() => {
                     dotsContainer.classList.remove('shake');
-                    const savedPasscode = localStorage.getItem('sys_passcode');
-                    if (!savedPasscode) {
-                        this.mode = 'CREATE';
-                        this.updateUI('Create Passcode', 'Setup a new 4-digit security key');
-                    } else {
-                        this.mode = 'ENTER';
-                        this.updateUI('Enter Passcode', 'Awaiting Authorization');
+                    if (this.mode === 'verify') {
+                        this.updatePrompt('Enter Passcode', '4-digit numeral code for iPhone');
+                    } else if (this.mode === 'create') {
+                        this.updatePrompt('Create Passcode', 'Enter a new 4-digit passcode');
+                    } else if (this.mode === 'confirm') {
+                        this.updatePrompt('Confirm Passcode', 'Re-enter your 4-digit passcode');
                     }
+                    this.currentInput = '';
+                    this.updateDots();
                 }, 600);
             }
         },
+
         unlock() {
-            this.isLocked = false;
             this.currentInput = '';
             const screen = document.getElementById('lock-screen');
             const appCore = document.getElementById('app-core');
@@ -517,9 +580,17 @@
             
             setTimeout(() => { screen.style.display = 'none'; }, 700);
         },
+
         lock() {
-            this.isLocked = true;
             this.currentInput = '';
+            const savedPasscode = localStorage.getItem('dreamos_passcode');
+            this.mode = savedPasscode ? 'verify' : 'create';
+            if (this.mode === 'verify') {
+                this.updatePrompt('Enter Passcode', '4-digit numeral code for iPhone');
+            } else {
+                this.updatePrompt('Create Passcode', 'Enter a new 4-digit passcode');
+            }
+
             const screen = document.getElementById('lock-screen');
             const appCore = document.getElementById('app-core');
             
@@ -529,44 +600,19 @@
             
             requestAnimationFrame(() => {
                 screen.classList.remove('lock-hidden');
-                const savedPasscode = localStorage.getItem('sys_passcode');
-                if (!savedPasscode) {
-                    this.mode = 'CREATE';
-                    this.updateUI('Create Passcode', 'Setup a new 4-digit security key');
-                } else {
-                    this.mode = 'ENTER';
-                    this.updateUI('Enter Passcode', 'Awaiting Authorization');
-                }
+                this.updateDots();
             });
         }
     };
 
     /** --- NEURAL LANGUAGE PROCESSING (NLP) ENGINE --- */
     const NLPEngine = {
-        // Implicit emotion triggers map directly to core emotions
-        emotionTriggers: {
-            'crying': 'sad', 'tears': 'sad', 'heartbreak': 'sad', 'loss': 'sad', 'mourning': 'sad', 'grief': 'sad',
-            'smiling': 'happy', 'laughing': 'happy', 'sunshine': 'joyful', 'flying': 'euphoric', 'dancing': 'joyful',
-            'yelling': 'angry', 'screaming': 'panicked', 'shaking': 'scared', 'hiding': 'fear', 'running': 'panicked',
-            'sweating': 'anxious', 'stuck': 'frustrated', 'trapped': 'terrified', 'frozen': 'terrified',
-            'peace': 'calm', 'floating': 'calm', 'relax': 'peaceful', 'quiet': 'calm',
-            'dark': 'scared', 'monster': 'terrified', 'scream': 'panicked', 'falling': 'terrified'
-        },
-        // Explicit emotion definitions
-        explicitEmotions: ['happy', 'sad', 'angry', 'scared', 'anxious', 'calm', 'confused', 'excited', 'terrified', 'joyful', 'frustrated', 'peaceful', 'panicked', 'dread', 'euphoric', 'melancholy', 'nostalgic', 'tense', 'overwhelmed', 'loved', 'hated', 'fear', 'rage', 'bliss'],
-        
-        // Extended stop words for cleaning up entity extraction
-        stopWords: new Set(['the', 'and', 'is', 'in', 'it', 'to', 'of', 'for', 'with', 'on', 'at', 'from', 'by', 'about', 'as', 'into', 'like', 'through', 'after', 'over', 'between', 'out', 'against', 'during', 'without', 'before', 'under', 'around', 'among', 'that', 'this', 'these', 'those', 'i', 'you', 'he', 'she', 'we', 'they', 'my', 'your', 'his', 'her', 'our', 'their', 'a', 'an', 'was', 'were', 'be', 'been', 'am', 'are', 'had', 'have', 'has', 'do', 'does', 'did', 'but', 'or', 'so', 'because', 'just', 'very', 'not', 'no', 'yes', 'can', 'could', 'would', 'should', 'will', 'all', 'some', 'any', 'many', 'much', 'more', 'most', 'other', 'such', 'only', 'same', 'than', 'too', 'also', 'went', 'came', 'said', 'told', 'saw', 'looked', 'felt']),
-
         extract(text) {
-            if (!text) return { type: 'Normal', people: [], entities: [], emotions: [] };
+            if (!text) return { type: 'Normal', people: [] };
             
             const words = text.match(/\b[a-zA-Z]+\b/g) || [];
-            let extEmotions = new Set();
             let extNames = new Set();
-            let extEntities = new Set();
 
-            // Extract Proper Nouns (Names) based on Capitalization not at sentence start
             const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
             sentences.forEach(sentence => {
                 const sentenceTokens = sentence.trim().split(/\s+/);
@@ -578,57 +624,31 @@
                 }
             });
 
-            // Flatten emotion triggers and explicits into one dictionary
-            const emotionMap = { ...this.emotionTriggers };
-            this.explicitEmotions.forEach(e => emotionMap[e] = e);
-
-            // Intelligent Contextual Extraction
-            words.forEach(wRaw => {
-                const w = wRaw.toLowerCase();
-                
-                // Track Emotions (Direct match or implicit trigger)
-                if (emotionMap[w]) {
-                    extEmotions.add(emotionMap[w]);
-                }
-                
-                // Track Entities (Words > 3 length, not stop words, not emotions, not names)
-                if (wRaw.length > 3 && !this.stopWords.has(w) && !emotionMap[w]) {
-                    let isName = false;
-                    extNames.forEach(name => {
-                        if (name.toLowerCase() === w) isName = true;
-                    });
-                    
-                    if (!isName) {
-                        extEntities.add(wRaw);
-                    }
-                }
-            });
-
-            // Type classification via weighted keyword analysis
             let type = 'Normal';
             const lucidTriggers = ['lucid', 'control', 'aware', 'realize', 'awake', 'knew', 'conscious', 'flew'];
             const nightmareTriggers = ['nightmare', 'scared', 'terrified', 'monster', 'run', 'chased', 'died', 'kill', 'dark', 'demon', 'ghost', 'trapped', 'scream', 'blood', 'fall'];
+            const recurringTriggers = ['again', 'always', 'recurring', 'happens', 'repeated', 'same'];
             
             let lucidScore = lucidTriggers.filter(t => words.map(w => w.toLowerCase()).includes(t)).length;
             let nightmareScore = nightmareTriggers.filter(t => words.map(w => w.toLowerCase()).includes(t)).length;
+            let recurringScore = recurringTriggers.filter(t => words.map(w => w.toLowerCase()).includes(t)).length;
             
-            if (lucidScore > 0 && lucidScore >= nightmareScore) type = 'Lucid';
+            if (recurringScore > 1) type = 'Recurring';
+            else if (lucidScore > 0 && lucidScore >= nightmareScore) type = 'Lucid';
             else if (nightmareScore > 0) type = 'Nightmare';
 
             return {
                 type,
-                people: [...extNames],
-                entities: [...extEntities].map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()),
-                emotions: [...extEmotions].map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+                people: [...extNames]
             };
         }
     };
 
     /** --- SYSTEM REGISTRY DATA PLATFORM --- */
     const Store = {
-        get() { try { const r = localStorage.getItem('dreams_v3'); return r ? JSON.parse(r).map(d => this.normalize(d)) : []; } catch (e) { return []; } },
-        save(d) { const ds = this.get(); ds.unshift(this.normalize(d)); try { localStorage.setItem('dreams_v3', JSON.stringify(ds)); } catch(e) {} },
-        delete(id) { const ds = this.get().filter(d => d.id !== id); try { localStorage.setItem('dreams_v3', JSON.stringify(ds)); } catch(e) {} },
+        get() { try { const r = localStorage.getItem('dreams_v8'); return r ? JSON.parse(r).map(d => this.normalize(d)) : []; } catch (e) { return []; } },
+        save(d) { const ds = this.get(); ds.unshift(this.normalize(d)); try { localStorage.setItem('dreams_v8', JSON.stringify(ds)); } catch(e) {} },
+        delete(id) { const ds = this.get().filter(d => d.id !== id); try { localStorage.setItem('dreams_v8', JSON.stringify(ds)); } catch(e) {} },
         getById(id) { return this.get().find(d => d.id == id); },
         normalize(d) {
             if (!d) d = {};
@@ -637,11 +657,10 @@
                 createdAt: d.createdAt || new Date().toISOString(), 
                 title: d.title || 'Untitled Stream Sequence', 
                 transcript: d.transcript || '', 
+                vividness: d.vividness || 5,
                 analysis: { 
                     type: d.analysis?.type || 'Normal', 
-                    emotions: Array.isArray(d.analysis?.emotions) ? d.analysis.emotions : [], 
-                    people: Array.isArray(d.analysis?.people) ? d.analysis.people : [], 
-                    entities: Array.isArray(d.analysis?.entities) ? d.analysis.entities : [] 
+                    people: Array.isArray(d.analysis?.people) ? d.analysis.people : []
                 }, 
                 metadata: { deleted: !!d.metadata?.deleted }
             };
@@ -651,12 +670,12 @@
     /** --- ANALYTICS FRAMEWORK PROCESSING --- */
     const PatternAnalyzer = {
         extract(dreams) {
-            const p = { entities: {}, people: {}, emotions: {}, types: { Normal: 0, Lucid: 0, Nightmare: 0 } };
+            const p = { people: {}, types: { Normal: 0, Lucid: 0, Nightmare: 0, Recurring: 0 } };
             dreams.forEach(d => {
                 if (!d.analysis) return;
                 const type = d.analysis.type;
                 if(p.types[type] !== undefined) p.types[type]++; else p.types['Normal']++;
-                ['emotions', 'entities', 'people'].forEach(cat => {
+                ['people'].forEach(cat => {
                     if (Array.isArray(d.analysis[cat])) {
                         d.analysis[cat].forEach(item => { 
                             if(item) { const norm = item.charAt(0).toUpperCase() + item.slice(1).toLowerCase(); p[cat][norm] = (p[cat][norm] || 0) + 1; }
@@ -665,115 +684,144 @@
                 });
             });
             const sortMap = (map) => Object.entries(map).sort((a,b) => b[1] - a[1]).map(([name, count]) => ({name, count}));
-            return { types: p.types, emotions: sortMap(p.emotions), entities: sortMap(p.entities), people: sortMap(p.people) };
-        }
-    };
-
-    const AnalyticsEngine = {
-        compute(searchQuery = '') {
-            let db = Store.get().filter(d => !d.metadata?.deleted);
-            if (searchQuery.trim()) {
-                const q = searchQuery.toLowerCase().trim();
-                db = db.filter(d => (d.title && d.title.toLowerCase().includes(q)) || (d.transcript && d.transcript.toLowerCase().includes(q)));
-            }
-            return { data: { totalDreams: db.length, types: PatternAnalyzer.extract(db).types, patterns: PatternAnalyzer.extract(db) } };
+            return { types: p.types, people: sortMap(p.people) };
         }
     };
 
     const AnalyticsModule = {
-        searchQuery: '',
         render() {
             const v = document.getElementById('viewport'); if(!v) return;
-            const { data } = AnalyticsEngine.compute(this.searchQuery);
             
+            let db = Store.get().filter(d => !d.metadata?.deleted);
+            const patterns = PatternAnalyzer.extract(db);
+            
+            const totalDreams = db.length;
+            const types = patterns.types;
+            const topPeople = patterns.people.slice(0, 5);
+            
+            let totalVividness = 0;
+            let vCounts = Array(11).fill(0);
+            db.forEach(d => {
+                let vScore = d.vividness;
+                if (!vScore) {
+                    let hash = 0;
+                    for (let i = 0; i < d.transcript.length; i++) hash = d.transcript.charCodeAt(i) + ((hash << 5) - hash);
+                    vScore = (Math.abs(hash) % 10) + 1;
+                }
+                totalVividness += vScore;
+                vCounts[vScore]++;
+            });
+            let avgVividness = totalDreams ? (totalVividness / totalDreams).toFixed(1) : "0.0";
+            
+            const vividColors = [
+                '#1e1b4b', '#312e81', '#4338ca', '#4f46e5', '#6366f1', 
+                '#8b5cf6', '#c084fc', '#06b6d4', '#22d3ee', '#67e8f9'
+            ];
+            
+            let conicStops = [];
+            if (totalDreams === 0) {
+                conicStops.push(`rgba(255,255,255,0.05) 0% 100%`);
+            } else {
+                let cumulative = 0;
+                for(let i=1; i<=10; i++) {
+                    if(vCounts[i] > 0) {
+                        let pct = (vCounts[i] / totalDreams) * 100;
+                        conicStops.push(`${vividColors[i-1]} ${cumulative}% ${cumulative + pct}%`);
+                        cumulative += pct;
+                    }
+                }
+            }
+            const pieGradient = conicStops.join(', ');
+
             v.innerHTML = `
-                <div class="max-w-7xl mx-auto pb-16">
-                    <div class="animate-slide-up" style="animation-delay: 0s">
-                        <div class="flex flex-col xl:flex-row justify-between items-start xl:items-end mb-12 md:mb-16 border-b border-white/10 pb-8 gap-8 relative">
-                            <div class="absolute -bottom-px left-0 w-1/3 h-px bg-gradient-to-r from-purple-500 to-transparent"></div>
-                            <div>
-                                <div class="text-[11px] font-mono uppercase tracking-[0.2em] text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-3 py-1.5 rounded-lg w-fit mb-4 shadow-[0_0_15px_rgba(6,182,212,0.15)] flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-                                    System Telemetry Matrix
+                <div class="max-w-6xl mx-auto pb-20 animate-slide-up">
+                    <div class="mb-12 border-b border-white/10 pb-8">
+                        <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white mb-2 heading-font">Telemetry Analytics</h1>
+                        <p class="text-zinc-400 font-light">Deep neural telemetry array of stored subconscious states and emotional resonance.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                        <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 flex flex-col justify-center relative overflow-hidden group hover:border-white/25 transition-all shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                            <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl pointer-events-none group-hover:bg-purple-500/30 transition-colors duration-700"></div>
+                            <h2 class="text-xs font-mono font-bold uppercase tracking-[0.2em] text-zinc-400 mb-6 flex items-center gap-3">
+                                <div class="p-2 bg-purple-500/10 rounded-lg border border-purple-500/30"><i data-lucide="database" class="w-4 h-4 text-purple-400"></i></div> 
+                                Total Dreams Captured
+                            </h2>
+                            <div class="text-7xl md:text-8xl font-black text-white heading-font relative z-10 drop-shadow-lg">${totalDreams}</div>
+                        </div>
+
+                        <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 shadow-[0_20px_40px_rgba(0,0,0,0.4)] relative overflow-hidden">
+                            <div class="absolute -left-20 -top-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                            <h2 class="text-xs font-mono font-bold uppercase tracking-[0.2em] text-zinc-400 mb-6 flex items-center gap-3 relative z-10">
+                                <div class="p-2 bg-cyan-500/10 rounded-lg border border-cyan-500/30"><i data-lucide="pie-chart" class="w-4 h-4 text-cyan-400"></i></div>
+                                Dream Categories
+                            </h2>
+                            <div class="grid grid-cols-2 gap-4 relative z-10">
+                                <div class="bg-[#030307]/60 backdrop-blur-md border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-cyan-500/30 transition-colors">
+                                    <div class="text-3xl font-bold text-white mb-2">${types.Lucid || 0}</div>
+                                    <div class="text-[10px] uppercase font-mono font-bold text-cyan-400 tracking-wider">Lucid</div>
                                 </div>
-                                <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-zinc-500 mb-3 heading-font leading-tight">Neural Analytics</h1>
-                                <p class="text-sm md:text-base text-zinc-400 tracking-wide max-w-2xl font-light">Deep structural data compilation analyzing underlying variables, emotional frequencies, and locational spatial matrices.</p>
-                            </div>
-                            <div class="relative group w-full xl:w-auto shrink-0">
-                                <i data-lucide="fingerprint" class="w-5 h-5 text-zinc-500 absolute left-5 top-1/2 -translate-y-1/2 group-focus-within:text-purple-400 transition-colors"></i>
-                                <input type="text" id="analytics-search" placeholder="Query tracking array parameters..." value="${this.searchQuery}" 
-                                    class="glass-card pl-14 pr-6 py-4 text-sm font-mono rounded-2xl outline-none focus:border-purple-500/60 focus:ring-4 focus:ring-purple-500/20 border border-white/10 w-full xl:w-96 transition-all duration-500 placeholder-zinc-500 text-zinc-100 shadow-xl">
+                                <div class="bg-[#030307]/60 backdrop-blur-md border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-purple-500/30 transition-colors">
+                                    <div class="text-3xl font-bold text-white mb-2">${types.Normal || 0}</div>
+                                    <div class="text-[10px] uppercase font-mono font-bold text-purple-400 tracking-wider">Normal</div>
+                                </div>
+                                <div class="bg-[#030307]/60 backdrop-blur-md border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-rose-500/30 transition-colors">
+                                    <div class="text-3xl font-bold text-white mb-2">${types.Nightmare || 0}</div>
+                                    <div class="text-[10px] uppercase font-mono font-bold text-rose-400 tracking-wider">Nightmare</div>
+                                </div>
+                                <div class="bg-[#030307]/60 backdrop-blur-md border border-white/5 p-5 rounded-2xl flex flex-col justify-between hover:border-emerald-500/30 transition-colors">
+                                    <div class="text-3xl font-bold text-white mb-2">${types.Recurring || 0}</div>
+                                    <div class="text-[10px] uppercase font-mono font-bold text-emerald-400 tracking-wider">Recurring</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 mb-16 perspective-1000">
-                        ${this.statCard("TOTAL CORE SECTORS", data.totalDreams, 0.1, "box", "text-purple-400", "bg-purple-500/10", "shadow-purple-500/10")}
-                        ${this.statCard("STANDARD STREAM MATRICES", data.types.Normal || 0, 0.2, "activity", "text-zinc-300", "bg-white/10", "shadow-white/5")}
-                        ${this.statCard("LUCID COGNITIVE ANCHORS", data.types.Lucid || 0, 0.3, "zap", "text-cyan-400", "bg-cyan-500/10", "shadow-cyan-500/10")}
-                        ${this.statCard("STRESS ANOMALY RECURRENCES", data.types.Nightmare || 0, 0.4, "alert-triangle", "text-rose-500", "bg-rose-500/10", "shadow-rose-500/10")}
-                    </div>
-                    
-                    <div class="animate-slide-up mb-6" style="animation-delay: 0.5s">
-                        <div class="flex items-center gap-4 mb-8">
-                            <div class="w-2 h-6 bg-gradient-to-b from-purple-500 to-cyan-500 rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)]"></div>
-                            <h2 class="text-sm uppercase font-bold tracking-[0.2em] text-zinc-300 font-mono">Extracted Core Variables</h2>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+                            <h2 class="text-xs font-mono font-bold uppercase tracking-[0.2em] text-zinc-400 mb-6 flex items-center gap-3">
+                                <div class="p-2 bg-purple-500/10 rounded-lg border border-purple-500/30"><i data-lucide="users" class="w-4 h-4 text-purple-400"></i></div>
+                                Top 5 Entities Noticed
+                            </h2>
+                            <div class="space-y-4">
+                                ${topPeople.length ? topPeople.map((person, idx) => `
+                                    <div class="flex justify-between items-center bg-black/40 border border-white/5 p-4 rounded-2xl hover:border-white/10 transition-colors group cursor-default">
+                                        <div class="flex items-center gap-4">
+                                            <span class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-[10px] font-mono text-zinc-500 border border-white/5 group-hover:text-white transition-colors">0${idx+1}</span>
+                                            <span class="text-sm font-medium text-zinc-200 tracking-wide">${person.name}</span>
+                                        </div>
+                                        <span class="text-[10px] font-mono font-bold text-purple-300 bg-purple-500/10 border border-purple-500/20 px-3 py-1.5 rounded-lg">${person.count} mentions</span>
+                                    </div>
+                                `).join('') : '<div class="text-sm text-zinc-500 font-mono italic p-8 text-center bg-black/20 rounded-2xl border border-dashed border-white/10">No human entities registered yet.</div>'}
+                            </div>
                         </div>
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                            ${this.rankCard("Identified Entities / People", data.patterns.people, "users", "border-purple-500/20", "bg-purple-500/10", "text-purple-400", "shadow-[0_10px_30px_rgba(168,85,247,0.05)]")}
-                            ${this.rankCard("Extracted Entities", data.patterns.entities, "box", "border-cyan-500/20", "bg-cyan-500/10", "text-cyan-400", "shadow-[0_10px_30px_rgba(6,182,212,0.05)]")}
-                            ${this.rankCard("Limbic Affection / Emotions", data.patterns.emotions, "heart", "border-rose-500/20", "bg-rose-500/10", "text-rose-400", "shadow-[0_10px_30px_rgba(244,63,94,0.05)]")}
+
+                        <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 flex flex-col justify-between shadow-[0_20px_40px_rgba(0,0,0,0.4)] relative overflow-hidden">
+                            <h2 class="text-xs font-mono font-bold uppercase tracking-[0.2em] text-zinc-400 mb-6 flex items-center gap-3 relative z-10">
+                                <div class="p-2 bg-emerald-500/10 rounded-lg border border-emerald-500/30"><i data-lucide="aperture" class="w-4 h-4 text-emerald-400"></i></div>
+                                Vividness Spectrum
+                            </h2>
+                            <div class="flex flex-col md:flex-row items-center gap-10 w-full justify-center flex-1 relative z-10">
+                                <div class="w-48 h-48 rounded-full shadow-[0_0_50px_rgba(0,0,0,0.6)] relative flex items-center justify-center shrink-0" style="background: conic-gradient(${pieGradient})">
+                                    <div class="absolute inset-2 bg-[#030307] rounded-full z-10 flex flex-col items-center justify-center shadow-inner border border-white/5">
+                                        <span class="text-4xl font-black text-white heading-font">${avgVividness}</span>
+                                        <span class="text-[9px] uppercase font-mono text-zinc-500 tracking-[0.2em] mt-1 text-center leading-tight">Average<br/>1-10 Scale</span>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-2 gap-x-6 gap-y-3">
+                                    ${vividColors.map((color, idx) => `
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-2.5 h-2.5 rounded-full border border-white/10" style="background-color: ${color}; box-shadow: 0 0 10px ${color}80"></span>
+                                            <span class="text-[10px] font-mono font-medium text-zinc-400">Level ${idx+1}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             `;
-            const searchInput = document.getElementById('analytics-search');
-            if (searchInput) {
-                searchInput.addEventListener('input', (e) => {
-                    this.searchQuery = e.target.value;
-                    this.render();
-                    const nextEl = document.getElementById('analytics-search');
-                    if (nextEl) { nextEl.focus(); nextEl.setSelectionRange(nextEl.value.length, nextEl.value.length); }
-                });
-            }
             lucide.createIcons();
-        },
-        statCard(label, val, delay, icon, iconColor, iconBg, shadow) { 
-            return `<div class="glass-card p-8 rounded-[2rem] border border-white/5 animate-slide-up hover-card relative overflow-hidden flex flex-col justify-between ${shadow}" style="animation-delay: ${delay}s; min-height: 160px;">
-                        <div class="absolute -right-10 -top-10 w-40 h-40 ${iconBg} rounded-full blur-3xl opacity-50 pointer-events-none"></div>
-                        <div class="flex justify-between items-start w-full relative z-10">
-                            <div class="text-[10px] font-mono tracking-[0.15em] text-zinc-400 font-bold uppercase w-2/3 leading-relaxed">${label}</div>
-                            <div class="p-2.5 ${iconBg} border border-white/10 rounded-2xl shadow-inner backdrop-blur-md">
-                                <i data-lucide="${icon}" class="w-5 h-5 ${iconColor}"></i>
-                            </div>
-                        </div>
-                        <div class="text-5xl md:text-6xl font-black text-white tracking-tighter heading-font mt-6 flex items-baseline gap-2 relative z-10 drop-shadow-lg">${val}<span class="text-sm font-mono font-normal text-zinc-500 tracking-widest">sys</span></div>
-                    </div>`; 
-        },
-        rankCard(title, arr, icon, border, bg, txt, shadow) {
-            return `
-                <div class="glass-card p-8 rounded-[2rem] border border-white/5 relative overflow-hidden group hover:border-white/20 transition-all duration-700 ${shadow} transform-gpu hover:-translate-y-2">
-                    <div class="absolute inset-0 bg-gradient-to-b from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-                    <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-5">
-                        <div class="flex items-center gap-4">
-                            <div class="p-2.5 rounded-xl ${bg} border ${border} ${txt} shadow-inner">
-                                <i data-lucide="${icon}" class="w-4 h-4"></i>
-                            </div>
-                            <div class="text-xs font-mono uppercase tracking-[0.15em] font-bold text-zinc-200">${title}</div>
-                        </div>
-                    </div>
-                    <div class="space-y-3 relative z-10">
-                        ${arr.length ? arr.slice(0,6).map((i, idx) => `
-                            <div class="flex justify-between items-center text-sm py-3 px-4 rounded-2xl hover:bg-white/[0.04] border border-transparent hover:border-white/10 transition-all duration-300 group/row cursor-default">
-                                <span class="flex items-center gap-4">
-                                    <span class="font-mono text-[10px] text-zinc-500 bg-black/50 border border-white/10 w-7 h-7 rounded-lg flex items-center justify-center group-hover/row:text-white transition-colors group-hover/row:border-white/30 shadow-inner">0${idx+1}</span> 
-                                    <span class="text-zinc-300 font-medium tracking-wide group-hover/row:text-white transition-colors">${i.name}</span>
-                                </span> 
-                                <span class="font-mono text-[10px] ${txt} font-bold ${bg} px-3 py-1 rounded-lg border ${border} shadow-sm">${i.count} cycles</span>
-                            </div>
-                        `).join('') : '<div class="text-sm text-zinc-500 py-12 italic text-center font-mono bg-black/20 rounded-2xl border border-dashed border-white/10">Awaiting telemetry extraction...</div>'}
-                    </div>
-                </div>`;
         }
     };
 
@@ -785,7 +833,8 @@
             const categories = [
                 { name: 'Lucid Memory Fields', type: 'Lucid', color: 'bg-cyan-400', text: 'text-cyan-400', border: 'border-cyan-500/30', bg: 'bg-cyan-950/40', shadow: 'shadow-[0_15px_40px_rgba(6,182,212,0.15)]', glow: 'from-cyan-500/20' },
                 { name: 'Subconscious Fractures / Nightmare', type: 'Nightmare', color: 'bg-rose-500', text: 'text-rose-400', border: 'border-rose-500/30', bg: 'bg-rose-950/40', shadow: 'shadow-[0_15px_40px_rgba(244,63,94,0.15)]', glow: 'from-rose-500/20' },
-                { name: 'Standard Cognitive Streams', type: 'Normal', color: 'bg-purple-400', text: 'text-purple-400', border: 'border-purple-500/30', bg: 'bg-purple-950/40', shadow: 'shadow-[0_15px_40px_rgba(168,85,247,0.15)]', glow: 'from-purple-500/20' }
+                { name: 'Standard Cognitive Streams', type: 'Normal', color: 'bg-purple-400', text: 'text-purple-400', border: 'border-purple-500/30', bg: 'bg-purple-950/40', shadow: 'shadow-[0_15px_40px_rgba(139,92,246,0.15)]', glow: 'from-purple-500/20' },
+                { name: 'Looped Pattern Variables', type: 'Recurring', color: 'bg-emerald-400', text: 'text-emerald-400', border: 'border-emerald-500/30', bg: 'bg-emerald-950/40', shadow: 'shadow-[0_15px_40px_rgba(16,185,129,0.15)]', glow: 'from-emerald-500/20' }
             ];
 
             let htmlContent = '';
@@ -797,7 +846,7 @@
                             <div class="absolute inset-0 rounded-full border-t-2 border-purple-500 animate-[spin_3s_linear_infinite]"></div>
                             <i data-lucide="dashed-circle" class="w-8 h-8 opacity-50"></i>
                         </div>
-                        <p class="text-sm font-mono text-zinc-400 tracking-[0.2em] max-w-sm mx-auto uppercase leading-loose">ARCHIVE FRAMEWORK EMPTY<br/><span class="text-cyan-400 font-bold opacity-80 mt-2 block">INITIALIZE CORE AUDIO TRANSMISSION</span></p>
+                        <p class="text-sm font-mono text-zinc-400 tracking-[0.2em] max-w-sm mx-auto uppercase leading-loose">ARCHIVE FRAMEWORK EMPTY<br/><span class="text-cyan-400 font-bold opacity-85 mt-2 block">INITIALIZE CORE AUDIO TRANSMISSION</span></p>
                     </div>`;
             } else {
                 categories.forEach((cat, index) => {
@@ -845,8 +894,11 @@
                         <h3 class="text-xl font-bold mb-3 text-zinc-100 line-clamp-1 group-hover:text-white transition-colors heading-font tracking-wide drop-shadow-md">${d.title}</h3>
                         <p class="text-sm text-zinc-400 line-clamp-2 leading-relaxed font-light font-sans opacity-80 group-hover:opacity-100 transition-opacity">${d.transcript}</p>
                     </div>
-                    <div class="flex items-center gap-2 mt-8 text-[11px] font-mono uppercase tracking-[0.2em] text-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-[-10px] group-hover:translate-x-0 relative z-10 font-bold">
-                        <span>Initialize Extraction</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <div class="flex items-center justify-between mt-8 relative z-10">
+                        <span class="text-[10px] font-mono text-zinc-400 bg-black/40 border border-white/5 px-2.5 py-1 rounded-md">Vividness: <strong class="text-cyan-400">${d.vividness || 5}/10</strong></span>
+                        <div class="flex items-center gap-2 text-[11px] font-mono uppercase tracking-[0.2em] text-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-[-10px] group-hover:translate-x-0 font-bold">
+                            <span>Initialize Extraction</span> <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </div>
                     </div>
                 </div>
             `;
@@ -871,6 +923,7 @@
                                 <div class="flex flex-wrap gap-4 items-center">
                                     <span class="text-[11px] font-mono font-bold uppercase tracking-[0.15em] text-purple-400 bg-purple-500/10 border border-purple-500/30 px-3 py-1.5 rounded-lg shadow-inner">${d.analysis.type}</span>
                                     <span class="text-xs text-zinc-400 font-mono flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-zinc-500"></i> ${dateStr}</span>
+                                    <span class="text-xs text-cyan-300 font-mono bg-cyan-500/10 border border-cyan-500/30 px-3 py-1.5 rounded-lg">Vividness: ${d.vividness || 5}/10</span>
                                 </div>
                             </div>
                             <button onclick="Store.delete(${d.id}); Router.navigate('archive');" class="p-4 glass-card rounded-[1.5rem] text-zinc-400 hover:text-rose-400 hover:border-rose-500/40 hover:bg-rose-500/10 transition-all duration-300 shadow-xl group">
@@ -887,10 +940,8 @@
                         
                         <div class="pt-8 border-t border-white/10 space-y-6 relative z-10">
                             <div class="text-[10px] font-mono text-zinc-500 uppercase tracking-[0.2em] mb-4">Extracted Segment Parameters</div>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                                ${this.tagGroup('Identified Entities / People', d.analysis.people, 'users', 'text-purple-300', 'bg-purple-500/20', 'border-purple-500/30', 'shadow-[0_0_15px_rgba(168,85,247,0.15)]')}
-                                ${this.tagGroup('Extracted Entities', d.analysis.entities, 'box', 'text-cyan-300', 'bg-cyan-500/20', 'border-cyan-500/30', 'shadow-[0_0_15px_rgba(6,182,212,0.15)]')}
-                                ${this.tagGroup('Limbic State / Emotions', d.analysis.emotions, 'heart', 'text-rose-300', 'bg-rose-500/20', 'border-rose-500/30', 'shadow-[0_0_15px_rgba(244,63,94,0.15)]')}
+                            <div class="grid grid-cols-1 sm:grid-cols-1 gap-6">
+                                ${this.tagGroup('Identified Entities / People', d.analysis.people, 'users', 'text-purple-300', 'bg-purple-500/20', 'border-purple-500/30', 'shadow-[0_0_15px_rgba(139,92,246,0.15)]')}
                             </div>
                         </div>
                     </div>
@@ -933,7 +984,7 @@
                         <h1 class="text-4xl md:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-br from-white via-zinc-200 to-zinc-500 heading-font drop-shadow-lg">Have your said</h1>
                         
                         <div class="flex items-center justify-center gap-4 mt-4">
-                            <button onclick="OrbEngine.setMode('orb')" id="btn-mode-orb" class="px-5 py-2.5 rounded-xl text-[11px] font-mono font-bold uppercase tracking-[0.2em] transition-all duration-300 bg-purple-500/20 text-purple-300 border border-purple-500/40 shadow-[0_0_20px_rgba(168,85,247,0.2)] hover:bg-purple-500/30">Neural Orb Link</button>
+                            <button onclick="OrbEngine.setMode('orb')" id="btn-mode-orb" class="px-5 py-2.5 rounded-xl text-[11px] font-mono font-bold uppercase tracking-[0.2em] transition-all duration-300 bg-purple-500/20 text-purple-300 border border-purple-500/40 shadow-[0_0_20px_rgba(139,92,246,0.2)] hover:bg-purple-500/30">Neural Orb Link</button>
                             <button onclick="OrbEngine.setMode('text')" id="btn-mode-text" class="px-5 py-2.5 rounded-xl text-[11px] font-mono font-bold uppercase tracking-[0.2em] transition-all duration-300 bg-black/40 text-zinc-400 border border-white/10 hover:text-white hover:border-white/20 glass-card">Manual Write</button>
                         </div>
 
@@ -956,26 +1007,38 @@
                         <div id="orb-morph-ring"></div>
                         
                         <div id="orb-core" class="orb-core flex items-center justify-center group" onclick="OrbEngine.toggle()">
-                            <span id="orb-hint" class="text-[11px] font-mono font-bold text-white/90 group-hover:text-cyan-300 uppercase tracking-[0.2em] transition duration-500 pointer-events-none drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] z-20">CONNECT</span>
+                            <span id="orb-hint" class="text-[11px] font-mono font-bold text-white/90 group-hover:text-cyan-300 uppercase tracking-[0.2em] transition duration-500 pointer-events-none drop-shadow-[0_0_8px_rgba(255,255,255,0.85)] z-20">CONNECT</span>
                         </div>
                         
                         <div class="morph-content">
-                            <div class="reveal-item delay-1 flex justify-between items-center mb-6 border-b border-white/10 pb-5">
+                            <div class="reveal-item delay-1 flex justify-between items-center mb-4 border-b border-white/10 pb-4">
                                 <div>
-                                    <h2 class="text-2xl md:text-3xl font-black text-white heading-font tracking-tight drop-shadow-md">Telemetry Synced</h2>
-                                    <p class="text-[10px] font-mono text-cyan-400 uppercase tracking-[0.2em] mt-1.5 opacity-80">Cognitive Database Matrix Map Stable</p>
+                                    <h2 class="text-xl md:text-2xl font-black text-white heading-font tracking-tight drop-shadow-md">Telemetry Synced</h2>
+                                    <p class="text-[10px] font-mono text-cyan-400 uppercase tracking-[0.2em] mt-1 opacity-85">Cognitive Database Matrix Map Stable</p>
                                 </div>
-                                <div class="w-12 h-12 rounded-[1rem] bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.2)] backdrop-blur-md">
-                                    <i data-lucide="check-square" class="w-6 h-6"></i>
+                                <div class="w-10 h-10 rounded-[1rem] bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shadow-[0_0_20px_rgba(6,182,212,0.2)] backdrop-blur-md">
+                                    <i data-lucide="check-square" class="w-5 h-5"></i>
                                 </div>
                             </div>
                             
-                            <div class="reveal-item delay-2 flex-1 glass-card rounded-[2rem] p-6 md:p-8 overflow-y-auto mb-6 border-white/10 bg-black/40 shadow-inner">
-                                <p id="morph-transcript" class="text-zinc-200 text-sm md:text-base leading-loose font-light tracking-wide"></p>
+                            <div class="reveal-item delay-2 flex-1 glass-card rounded-[1.5rem] p-4 md:p-5 overflow-y-auto mb-4 border-white/10 bg-black/40 shadow-inner max-h-[140px]">
+                                <p id="morph-transcript" class="text-zinc-200 text-xs md:text-sm leading-relaxed font-light tracking-wide"></p>
+                            </div>
+
+                            <div class="reveal-item delay-2.5 mb-4 glass-card p-4 rounded-[1.5rem] border border-white/10 bg-black/50">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-cyan-400">Vividness / Intensity Level</span>
+                                    <span id="vividness-value" class="text-sm font-black font-mono text-white bg-cyan-500/20 border border-cyan-500/40 px-2.5 py-0.5 rounded-lg">5</span>
+                                </div>
+                                <input type="range" id="vividness-slider" min="1" max="10" value="5" class="w-full cursor-pointer" oninput="document.getElementById('vividness-value').innerText = this.value">
+                                <div class="flex justify-between text-[9px] font-mono text-zinc-500 mt-1.5">
+                                    <span>1 (Faint)</span>
+                                    <span>10 (Hyper-Vivid)</span>
+                                </div>
                             </div>
                             
-                            <button onclick="OrbEngine.saveAndRoute()" class="reveal-item delay-3 w-full py-5 rounded-[1.5rem] bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold tracking-[0.1em] hover:brightness-125 transition-all duration-300 shadow-[0_10px_40px_rgba(168,85,247,0.4)] hover:shadow-[0_15px_50px_rgba(6,182,212,0.5)] flex items-center justify-center gap-3 text-sm uppercase font-mono transform hover:-translate-y-1">
-                                <i data-lucide="shield-alert" class="w-5 h-5"></i> Commit Telemetry Array
+                            <button onclick="OrbEngine.saveAndRoute()" class="reveal-item delay-3 w-full py-4 rounded-[1.25rem] bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold tracking-[0.1em] hover:brightness-125 transition-all duration-300 shadow-[0_10px_40px_rgba(139,92,246,0.4)] hover:shadow-[0_15px_50px_rgba(6,182,212,0.5)] flex items-center justify-center gap-3 text-xs uppercase font-mono transform hover:-translate-y-1">
+                                <i data-lucide="shield-alert" class="w-4 h-4"></i> Commit Telemetry Array
                             </button>
                         </div>
                     </div>
@@ -985,9 +1048,22 @@
                     <div id="text-stage" class="hidden w-full max-w-3xl mx-auto animate-slide-up flex-col gap-6 mt-6" style="animation-delay: 0.2s">
                         <div class="relative group">
                             <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-                            <textarea id="manual-transcript" class="glass-card w-full h-64 bg-black/60 text-zinc-100 rounded-[2rem] p-8 text-base md:text-lg leading-loose tracking-wide resize-none outline-none focus:border-cyan-500/50 focus:ring-4 focus:ring-cyan-500/20 transition-all duration-300 placeholder-zinc-600 font-light relative z-10 shadow-inner" placeholder="Initiate manual entry sequence... Document the entities, emotions, and occurrences..."></textarea>
+                            <textarea id="manual-transcript" class="glass-card w-full h-44 bg-black/60 text-zinc-100 rounded-[2rem] p-6 text-sm md:text-base leading-relaxed tracking-wide resize-none outline-none focus:border-cyan-500/50 focus:ring-4 focus:ring-cyan-500/20 transition-all duration-300 placeholder-zinc-600 font-light relative z-10 shadow-inner" placeholder="Initiate manual entry sequence... Document the entities, emotions, and occurrences..."></textarea>
                         </div>
-                        <button onclick="OrbEngine.saveTextAndRoute()" class="w-full py-5 rounded-[1.5rem] bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-bold tracking-[0.1em] hover:brightness-125 transition-all duration-300 shadow-[0_10px_40px_rgba(6,182,212,0.4)] hover:shadow-[0_15px_50px_rgba(168,85,247,0.5)] flex items-center justify-center gap-3 text-sm uppercase font-mono transform hover:-translate-y-1">
+
+                        <div class="glass-card p-6 rounded-[2rem] border border-white/10 bg-black/40">
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-cyan-400">Vividness / Intensity Level</span>
+                                <span id="manual-vividness-value" class="text-base font-black font-mono text-white bg-cyan-500/20 border border-cyan-500/40 px-3 py-1 rounded-xl">5</span>
+                            </div>
+                            <input type="range" id="manual-vividness-slider" min="1" max="10" value="5" class="w-full cursor-pointer" oninput="document.getElementById('manual-vividness-value').innerText = this.value">
+                            <div class="flex justify-between text-[9px] font-mono text-zinc-500 mt-2">
+                                <span>1 (Faint)</span>
+                                <span>10 (Hyper-Vivid)</span>
+                            </div>
+                        </div>
+
+                        <button onclick="OrbEngine.saveTextAndRoute()" class="w-full py-5 rounded-[1.5rem] bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-bold tracking-[0.1em] hover:brightness-125 transition-all duration-300 shadow-[0_10px_40px_rgba(6,182,212,0.4)] hover:shadow-[0_15px_50px_rgba(139,92,246,0.5)] flex items-center justify-center gap-3 text-sm uppercase font-mono transform hover:-translate-y-1">
                             <i data-lucide="keyboard" class="w-5 h-5"></i> Commit Manual Telemetry
                         </button>
                     </div>
@@ -1011,12 +1087,10 @@
                     const mt = document.getElementById('morph-transcript');
                     if(mt) mt.innerText = this.finalTranscript;
 
-                    // Reset auto-stop timeout
                     clearTimeout(this.timeoutRef);
                     this.timeoutRef = setTimeout(() => { if (this.isRecording) this.stop(); }, 8000);
                 };
 
-                // Continuous listening safeguard
                 this.recognition.onend = () => {
                     if(this.isRecording) { try { this.recognition.start(); } catch(e){} }
                 };
@@ -1041,7 +1115,7 @@
             const liveFeedback = document.getElementById('live-feedback');
 
             if (mode === 'orb') {
-                btnOrb.className = "px-5 py-2.5 rounded-xl text-[11px] font-mono font-bold uppercase tracking-[0.2em] transition-all duration-300 bg-purple-500/20 text-purple-300 border border-purple-500/40 shadow-[0_0_20px_rgba(168,85,247,0.2)] hover:bg-purple-500/30";
+                btnOrb.className = "px-5 py-2.5 rounded-xl text-[11px] font-mono font-bold uppercase tracking-[0.2em] transition-all duration-300 bg-purple-500/20 text-purple-300 border border-purple-500/40 shadow-[0_0_20px_rgba(139,92,246,0.2)] hover:bg-purple-500/30";
                 btnText.className = "px-5 py-2.5 rounded-xl text-[11px] font-mono font-bold uppercase tracking-[0.2em] transition-all duration-300 bg-black/40 text-zinc-400 border border-white/10 hover:text-white hover:border-white/20 glass-card";
                 
                 stageOrb.classList.remove('hidden');
@@ -1092,8 +1166,18 @@
         async startAudioReactive() {
             try {
                 if(!navigator.mediaDevices) return;
-                this.audioStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                this.audioStream = await navigator.mediaDevices.getUserMedia({ 
+                    audio: { 
+                        echoCancellation: true, 
+                        noiseSuppression: true, 
+                        autoGainControl: true,
+                        channelCount: 1 
+                    } 
+                });
                 this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                if (this.audioCtx.state === 'suspended') {
+                    await this.audioCtx.resume();
+                }
                 this.analyser = this.audioCtx.createAnalyser();
                 this.analyser.fftSize = 256;
                 const source = this.audioCtx.createMediaStreamSource(this.audioStream);
@@ -1101,7 +1185,7 @@
                 this.audioData = new Uint8Array(this.analyser.frequencyBinCount);
                 this.tickAudio();
             } catch(err) {
-                console.warn("Telemetry wave bypassed (No Mic Permissions)");
+                console.warn("Telemetry wave bypassed:", err);
             }
         },
 
@@ -1118,7 +1202,7 @@
                 if (orb && stage && !stage.classList.contains('is-morphed')) {
                     const volumeScale = 1.05 + (avg / 256) * 0.4; 
                     orb.style.transform = `scale(${volumeScale})`;
-                    orb.style.boxShadow = `inset -15px -15px 40px rgba(0,0,0,0.9), inset 15px 15px 45px rgba(255,255,255,0.9), 0 0 ${80 + (avg * 2)}px rgba(6, 182, 212, ${0.5 + (avg/150)})`;
+                    orb.style.boxShadow = `inset -18px -18px 45px rgba(0,0,0,0.9), inset 18px 18px 45px rgba(255,255,255,0.95), 0 0 ${90 + (avg * 2.2)}px rgba(6, 182, 212, ${0.5 + (avg/140)})`;
                 }
             }
             this.audioAnimFrame = requestAnimationFrame(() => this.tickAudio());
@@ -1146,7 +1230,7 @@
             document.getElementById('orb-hint').innerText = "LISTENING";
             document.getElementById('live-feedback').style.opacity = '1';
             document.getElementById('live-feedback').style.transform = 'translateY(0)';
-            document.getElementById('live-feedback').innerHTML = '<span class="text-cyan-500/60 text-sm font-mono tracking-[0.2em] animate-pulse">TRANSMISSION STREAM OPEN...</span>';
+            document.getElementById('live-feedback').innerHTML = '<span class="text-cyan-500/65 text-sm font-mono tracking-[0.2em] animate-pulse">TRANSMISSION STREAM OPEN...</span>';
 
             this.timeoutRef = setTimeout(() => {
                 if(this.isRecording) this.stop();
@@ -1173,16 +1257,18 @@
             }
             
             stage.classList.remove('is-listening');
-            stage.classList.add('is-morphed'); 
+            requestAnimationFrame(() => {
+                stage.classList.add('is-morphed');
+            });
 
             setTimeout(() => { 
                 const inst = document.getElementById('orb-instructions');
                 if (inst) {
                     inst.style.opacity = '0';
                     inst.style.transform = 'translateY(-20px)';
-                    setTimeout(() => inst.style.display = 'none', 700);
+                    setTimeout(() => inst.style.display = 'none', 400);
                 }
-            }, 400);
+            }, 200);
             
             const fb = document.getElementById('live-feedback');
             if (fb) {
@@ -1193,25 +1279,28 @@
             setTimeout(() => {
                 const mt = document.getElementById('morph-transcript');
                 if (mt) mt.innerText = this.finalTranscript.trim() || "No telemetry stream captured. Neural transmission dropped.";
-            }, 100);
+            }, 50);
         },
 
         saveTextAndRoute() {
             const manualText = document.getElementById('manual-transcript').value;
-            this.processAndSave(manualText);
+            const vividness = parseInt(document.getElementById('manual-vividness-slider')?.value || 5);
+            this.processAndSave(manualText, vividness);
         },
 
         saveAndRoute() {
-            this.processAndSave(this.finalTranscript);
+            const vividness = parseInt(document.getElementById('vividness-slider')?.value || 5);
+            this.processAndSave(this.finalTranscript, vividness);
         },
 
-        processAndSave(rawData) {
+        processAndSave(rawData, vividness = 5) {
             if (rawData.trim()) {
                 const analysisResult = NLPEngine.extract(rawData);
                 Store.save({
                     title: rawData.slice(0, 40) + (rawData.length > 40 ? '...' : ''), 
                     transcript: rawData, 
-                    analysis: analysisResult
+                    analysis: analysisResult,
+                    vividness: vividness
                 });
             }
             Router.navigate('archive');
@@ -1228,7 +1317,7 @@
             
             document.querySelectorAll('.nav-item').forEach(el => el.classList.toggle('active', el.dataset.page === pageId));
             
-            await new Promise(r => setTimeout(r, 600));
+            await new Promise(r => setTimeout(r, 400));
             
             if (pageId === 'record') OrbEngine.init(v);
             else if (pageId === 'archive') ArchiveModule.render();
@@ -1243,7 +1332,6 @@
         }
     };
 
-    // Global Interactive Listeners
     document.getElementById('nav-menu').addEventListener('click', (e) => {
         const link = e.target.closest('a');
         if (link && link.dataset.page) { 
@@ -1252,7 +1340,6 @@
         }
     });
 
-    // Fire Interface Sequence
     Router.navigate('record');
     SystemLock.init();
 </script>
