@@ -64,7 +64,7 @@
         }
 
         body::before {
-            content: ""; position: fixed; inset: 0; z-index: 99999; pointer-events: none;
+            content: ""; position: fixed; inset: 0; z-index: 1; pointer-events: none;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
         }
         html[data-theme="light"] body::before { opacity: 0.1; }
@@ -281,6 +281,7 @@
         html[data-theme="light"] .text-emerald-300,
         html[data-theme="light"] .text-emerald-400 { color: #0E7088 !important; }
         html[data-theme="light"] .text-amber-400 { color: #C4A35A !important; }
+        #app-core { position: relative; z-index: 2; }
         /* App-like desktop shell */
         @media (min-width: 768px) {
             #app-core {
@@ -1173,6 +1174,177 @@
             fill: #4F6E7D;
         }
 
+
+        /* ========== MOBILE INTERACTION SYSTEM ========== */
+        button, a.nav-item, .nav-item, [role="button"], .auth-btn, .auth-link,
+        .theme-toggle, input[type="range"], .orb-core, label {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            cursor: pointer;
+        }
+        button, .auth-btn, .auth-link, .nav-item, .theme-toggle {
+            min-height: 44px;
+            min-width: 44px;
+            position: relative;
+            z-index: 1;
+        }
+        .auth-btn {
+            min-height: 48px;
+            padding-top: 0.95rem;
+            padding-bottom: 0.95rem;
+        }
+        .auth-input {
+            min-height: 48px;
+            font-size: 16px; /* prevent iOS zoom */
+            touch-action: manipulation;
+        }
+        /* Decorative layers never intercept taps */
+        .auth-aurora, .auth-aurora-blob, .auth-grid-fade, .auth-particles,
+        #auth-starfield, #atmospheric-orb, #atmospheric-orb-2, .app-grid,
+        .orb-glow, .ripple, .tech-ring, #orb-morph-ring,
+        body::before {
+            pointer-events: none !important;
+        }
+        /* Interactive surfaces above decorations */
+        #lock-screen .auth-shell {
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
+        }
+        #lock-screen .auth-card,
+        #lock-screen .auth-btn,
+        #lock-screen .auth-input,
+        #lock-screen .auth-link {
+            pointer-events: auto;
+            position: relative;
+            z-index: 11;
+        }
+        #app-nav, #app-nav .nav-item, #viewport button, #viewport a,
+        #viewport input, #viewport textarea {
+            pointer-events: auto;
+            position: relative;
+            z-index: 5;
+        }
+        #app-nav { z-index: 50; }
+        /* Prevent stuck disabled state styles from blocking forever without attribute */
+        button:not([disabled]):not(.is-busy) {
+            pointer-events: auto;
+        }
+        button.is-busy, button[disabled] {
+            pointer-events: none;
+            opacity: 0.65;
+        }
+        /* Mobile nav: larger tap areas */
+        @media (max-width: 767px) {
+            .nav-item {
+                min-height: 52px;
+                min-width: 0;
+                padding: 10px 4px 8px !important;
+                flex: 1;
+            }
+            .nav-item i {
+                width: 22px !important;
+                height: 22px !important;
+            }
+            #app-nav {
+                z-index: 60;
+                pointer-events: auto;
+            }
+            /* Orb core larger tap target on mobile */
+            .orb-core {
+                min-width: 140px;
+                min-height: 140px;
+            }
+            #orb-hint { pointer-events: none; }
+            /* Mode buttons */
+            #orb-instructions button {
+                min-height: 44px;
+                min-width: 88px;
+                padding: 0.65rem 1rem !important;
+                font-size: 10px !important;
+            }
+        }
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            #auth-starfield, .auth-aurora-blob, .auth-particles i {
+                animation: none !important;
+            }
+        }
+
+        /* ========== AUTH DEEP SPACE BACKGROUND ========== */
+        #lock-screen {
+            position: fixed; inset: 0; z-index: 9999;
+            background: #020308 !important;
+            background-image:
+                radial-gradient(ellipse 80% 50% at 50% 0%, rgba(20, 24, 48, 0.45) 0%, transparent 55%),
+                radial-gradient(ellipse 60% 40% at 20% 80%, rgba(12, 16, 40, 0.35) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 30% at 85% 70%, rgba(18, 12, 36, 0.3) 0%, transparent 45%),
+                linear-gradient(180deg, #03040a 0%, #020308 40%, #010205 100%) !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+            padding: 1.5rem;
+            transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1), filter 0.65s ease;
+        }
+        #lock-screen::before {
+            content: ''; position: absolute; inset: 0;
+            background: transparent;
+            animation: none;
+            pointer-events: none;
+            z-index: 0;
+        }
+        #auth-starfield {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            z-index: 0; pointer-events: none !important;
+            display: block;
+        }
+        .auth-aurora {
+            position: absolute; inset: 0; overflow: hidden; pointer-events: none !important; z-index: 1;
+        }
+        .auth-aurora-blob {
+            position: absolute; border-radius: 50%; filter: blur(100px);
+            pointer-events: none !important;
+            animation: authDrift 28s ease-in-out infinite alternate;
+            opacity: 0.55;
+        }
+        .auth-blob-1 {
+            width: 50vw; height: 50vw; max-width: 520px; max-height: 520px;
+            top: -12%; left: -8%;
+            background: radial-gradient(circle, rgba(60, 50, 120, 0.22) 0%, transparent 70%);
+        }
+        .auth-blob-2 {
+            width: 40vw; height: 40vw; max-width: 420px; max-height: 420px;
+            bottom: -15%; right: -6%;
+            background: radial-gradient(circle, rgba(30, 70, 100, 0.18) 0%, transparent 70%);
+            animation-delay: -8s; animation-duration: 34s;
+        }
+        .auth-blob-3 {
+            width: 30vw; height: 30vw; max-width: 320px; max-height: 320px;
+            top: 45%; left: 50%;
+            background: radial-gradient(circle, rgba(80, 40, 90, 0.12) 0%, transparent 70%);
+            animation-delay: -14s; animation-duration: 40s;
+        }
+        .auth-grid-fade { display: none; }
+        .auth-particles { position: absolute; inset: 0; pointer-events: none !important; }
+        .auth-particles i {
+            position: absolute; width: 2px; height: 2px; border-radius: 50%;
+            background: rgba(255,255,255,0.35);
+            box-shadow: 0 0 4px rgba(180,180,255,0.25);
+            animation: authParticle 22s linear infinite;
+            opacity: 0;
+            pointer-events: none !important;
+        }
+        .auth-card {
+            background: linear-gradient(165deg, rgba(14,14,22,0.88) 0%, rgba(6,6,12,0.94) 100%) !important;
+            border: 1px solid rgba(255,255,255,0.08) !important;
+            box-shadow:
+                0 40px 100px -20px rgba(0,0,0,0.85),
+                0 0 80px -30px rgba(80, 60, 140, 0.15),
+                0 0 0 1px rgba(255,255,255,0.03) inset !important;
+        }
+
+
     </style>
 </head>
 <body class="bg-[#010103]">
@@ -1180,13 +1352,13 @@
     <!-- iPhone Style Passcode / Setup Vault Screen -->
     <div id="lock-screen" class="select-none">
         <!-- Aurora background layers -->
+        <canvas id="auth-starfield" aria-hidden="true"></canvas>
         <div class="auth-aurora" aria-hidden="true">
             <div class="auth-aurora-blob auth-blob-1"></div>
             <div class="auth-aurora-blob auth-blob-2"></div>
             <div class="auth-aurora-blob auth-blob-3"></div>
-            <div class="auth-grid-fade"></div>
             <div class="auth-particles">
-                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
             </div>
         </div>
 
@@ -1206,10 +1378,12 @@
                     <p class="auth-kicker">Get started</p>
                     <h1 class="auth-title heading-font">Create your account</h1>
                     <p class="auth-sub">Choose a username to begin. No password required — your data stays on this device.</p>
+                    <form id="auth-form-su1" onsubmit="event.preventDefault(); AuthUI.signupNext1(); return false;" autocomplete="on">
                     <label class="auth-label" for="auth-su-user">Username</label>
-                    <input id="auth-su-user" class="auth-input" type="text" maxlength="20" autocomplete="username" spellcheck="false" placeholder="e.g. alex" />
+                    <input id="auth-su-user" class="auth-input" type="text" maxlength="20" autocomplete="username" spellcheck="false" placeholder="e.g. alex" enterkeyhint="next" />
                     <p class="auth-error hidden" id="auth-su-err-1"></p>
-                    <button type="button" class="auth-btn auth-btn-primary" id="auth-su-next-1" onclick="AuthUI.signupNext1()">Continue</button>
+                    <button type="submit" class="auth-btn auth-btn-primary" id="auth-su-next-1">Continue</button>
+                    </form>
                     <p class="auth-switch">Already have an account? <button type="button" class="auth-link" onclick="AuthUI.showLogin()">Sign in</button></p>
                 </div>
 
@@ -1218,11 +1392,13 @@
                     <p class="auth-kicker">Confirm</p>
                     <h1 class="auth-title heading-font">Confirm username</h1>
                     <p class="auth-sub">Type it once more so we know it’s right.</p>
+                    <form id="auth-form-su2" onsubmit="event.preventDefault(); AuthUI.createAccount(); return false;" autocomplete="off">
                     <label class="auth-label" for="auth-su-confirm">Confirm username</label>
-                    <input id="auth-su-confirm" class="auth-input" type="text" maxlength="20" autocomplete="off" spellcheck="false" placeholder="Re-enter username" />
+                    <input id="auth-su-confirm" class="auth-input" type="text" maxlength="20" autocomplete="off" spellcheck="false" placeholder="Re-enter username" enterkeyhint="done" />
                     <p class="auth-error hidden" id="auth-su-err-2"></p>
-                    <button type="button" class="auth-btn auth-btn-primary" id="auth-su-create" onclick="AuthUI.createAccount()">Create account</button>
+                    <button type="submit" class="auth-btn auth-btn-primary" id="auth-su-create">Create account</button>
                     <button type="button" class="auth-btn auth-btn-ghost" onclick="AuthUI.showSignup1()">Back</button>
+                    </form>
                 </div>
 
                 <!-- SIGNUP: success -->
@@ -1239,10 +1415,12 @@
                     <p class="auth-kicker">Welcome back</p>
                     <h1 class="auth-title heading-font">Sign in</h1>
                     <p class="auth-sub">Enter the username for the account on this device.</p>
+                    <form id="auth-form-li" onsubmit="event.preventDefault(); AuthUI.login(); return false;" autocomplete="on">
                     <label class="auth-label" for="auth-li-user">Username</label>
-                    <input id="auth-li-user" class="auth-input" type="text" maxlength="20" autocomplete="username" spellcheck="false" placeholder="Your username" />
+                    <input id="auth-li-user" class="auth-input" type="text" maxlength="20" autocomplete="username" spellcheck="false" placeholder="Your username" enterkeyhint="go" />
                     <p class="auth-error hidden" id="auth-li-err"></p>
-                    <button type="button" class="auth-btn auth-btn-primary" id="auth-li-btn" onclick="AuthUI.login()">Sign in</button>
+                    <button type="submit" class="auth-btn auth-btn-primary" id="auth-li-btn">Sign in</button>
+                    </form>
                     <p class="auth-switch">New here? <button type="button" class="auth-link" onclick="AuthUI.showSignup1()">Create an account</button></p>
                 </div>
             </div>
@@ -1308,6 +1486,105 @@
 
 <script>
     /** --- SYSTEM SECURITY PROTOCOL (IPHONE 4-DIGIT PASSCODE & CREATION FLOW) --- */
+
+    /** Mobile interaction guard — single-fire critical actions */
+    const InteractionGuard = {
+        _last: {},
+        once(key, fn, ms) {
+            ms = ms || 600;
+            const now = Date.now();
+            if (this._last[key] && now - this._last[key] < ms) return;
+            this._last[key] = now;
+            return fn();
+        },
+        debug: false,
+        log(el, type) {
+            if (!this.debug) return;
+            try {
+                console.log('[Tap]', type, el && (el.id || el.className || el.tagName),
+                    'disabled=', el && el.disabled, 'busy=', el && el.classList && el.classList.contains('is-busy'));
+            } catch (e) {}
+        }
+    };
+
+    /** Deep-space starfield for auth — canvas, deterministic, mobile-safe */
+    const AuthStarfield = {
+        canvas: null, ctx: null, stars: [], raf: 0, running: false,
+        init() {
+            this.canvas = document.getElementById('auth-starfield');
+            if (!this.canvas) return;
+            this.ctx = this.canvas.getContext('2d');
+            this.resize();
+            this.buildStars();
+            this.running = true;
+            const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduce) {
+                this.draw(0);
+                return;
+            }
+            this.loop(0);
+            window.addEventListener('resize', () => { this.resize(); this.buildStars(); }, { passive: true });
+        },
+        resize() {
+            if (!this.canvas) return;
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            const w = window.innerWidth, h = window.innerHeight;
+            this.canvas.width = Math.floor(w * dpr);
+            this.canvas.height = Math.floor(h * dpr);
+            this.canvas.style.width = w + 'px';
+            this.canvas.style.height = h + 'px';
+            this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            this.w = w; this.h = h;
+        },
+        // Deterministic PRNG
+        _seed: 42,
+        rnd() {
+            this._seed = (this._seed * 16807 + 0) % 2147483647;
+            return (this._seed - 1) / 2147483646;
+        },
+        buildStars() {
+            this._seed = 42;
+            const isMobile = window.innerWidth < 768;
+            const n = isMobile ? 90 : 160;
+            this.stars = [];
+            for (let i = 0; i < n; i++) {
+                this.stars.push({
+                    x: this.rnd() * (this.w || window.innerWidth),
+                    y: this.rnd() * (this.h || window.innerHeight),
+                    r: this.rnd() * (isMobile ? 1.1 : 1.4) + 0.2,
+                    a: this.rnd() * 0.55 + 0.1,
+                    tw: this.rnd() * Math.PI * 2,
+                    sp: 0.15 + this.rnd() * 0.35,
+                    layer: this.rnd() < 0.7 ? 0 : 1
+                });
+            }
+        },
+        draw(t) {
+            if (!this.ctx || !this.w) return;
+            const ctx = this.ctx;
+            ctx.clearRect(0, 0, this.w, this.h);
+            // subtle vignette depth already from CSS
+            for (const s of this.stars) {
+                const twinkle = 0.65 + 0.35 * Math.sin(t * 0.0004 * s.sp + s.tw);
+                const alpha = s.a * twinkle;
+                ctx.beginPath();
+                ctx.fillStyle = 'rgba(220, 225, 255,' + alpha + ')';
+                ctx.arc(s.x, s.y + (s.layer * Math.sin(t * 0.00008 + s.tw) * 2), s.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        },
+        loop(t) {
+            if (!this.running) return;
+            this.draw(t);
+            this.raf = requestAnimationFrame((ts) => this.loop(ts));
+        },
+        stop() {
+            this.running = false;
+            if (this.raf) cancelAnimationFrame(this.raf);
+        }
+    };
+
+
     /** --- THEME --- */
     const Theme = {
         KEY: 'dreamos_theme',
@@ -1421,6 +1698,7 @@
 
         init() {
             Auth.clearLegacy();
+            try { AuthStarfield.init(); } catch (e) {}
 
             const screen = document.getElementById('lock-screen');
             const app = document.getElementById('app-core');
@@ -1517,6 +1795,9 @@
         },
 
         signupNext1() {
+            return InteractionGuard.once('signupNext1', () => this._signupNext1());
+        },
+        _signupNext1() {
             const input = document.getElementById('auth-su-user');
             const name = (input?.value || '').trim();
             this.hideErr('auth-su-err-1');
@@ -1541,6 +1822,9 @@
         },
 
         createAccount() {
+            return InteractionGuard.once('createAccount', () => this._createAccount());
+        },
+        _createAccount() {
             const input = document.getElementById('auth-su-confirm');
             const confirm = (input?.value || '').trim();
             this.hideErr('auth-su-err-2');
@@ -1568,6 +1852,9 @@
         },
 
         login() {
+            return InteractionGuard.once('login', () => this._login());
+        },
+        _login() {
             const input = document.getElementById('auth-li-user');
             const name = (input?.value || '').trim();
             this.hideErr('auth-li-err');
@@ -1587,6 +1874,7 @@
         enterApp() {
             const screen = document.getElementById('lock-screen');
             const app = document.getElementById('app-core');
+            try { AuthStarfield.stop(); } catch (e) {}
             if (screen) {
                 screen.classList.add('lock-hidden');
                 setTimeout(() => { screen.style.display = 'none'; }, 650);
@@ -1616,6 +1904,7 @@
                 screen.style.display = 'flex';
                 screen.classList.remove('lock-hidden');
             }
+            try { AuthStarfield.init(); } catch (e) {}
             this.showLogin();
         },
 
@@ -3919,9 +4208,11 @@
         },
 
         toggle() {
-            if(document.getElementById('orb-stage').classList.contains('is-morphed')) return;
-            if (this.speechSupported === false) { this.setMode('text'); return; }
-            if(!this.isRecording) this.start(); else this.stop();
+            InteractionGuard.once('orbToggle', () => {
+                if(document.getElementById('orb-stage').classList.contains('is-morphed')) return;
+                if (this.speechSupported === false) { this.setMode('text'); return; }
+                if(!this.isRecording) this.start(); else this.stop();
+            }, 400);
         },
 
         async start() {
@@ -4050,6 +4341,7 @@
         },
 
         processAndSave(rawData, vividness = 5) {
+            return InteractionGuard.once('saveDream', () => {
             const text = (rawData || '').trim();
             if (!text) {
                 Router.navigate('archive');
@@ -4076,6 +4368,7 @@
                 metadata: { deleted: false }
             });
             Router.navigate('archive');
+            });
         }
     };
 
